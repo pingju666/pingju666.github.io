@@ -133,6 +133,66 @@
       "location": "云顶花海",
       "tags": [],
       "image": "photos/uncategorized/P1050176-1762265790386.JPG"
+    },
+    {
+      "id": 12,
+      "title": "东山寺",
+      "description": "东山寺",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "东山寺",
+      "tags": [],
+      "image": "photos/风景/P1050302-1762267749314.JPG"
+    },
+    {
+      "id": 13,
+      "title": "东山寺",
+      "description": "东山寺",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "东山寺",
+      "tags": [],
+      "image": "photos/风景/P1050302-1762267777934.JPG"
+    },
+    {
+      "id": 14,
+      "title": "东山寺远",
+      "description": "东山寺远",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "东山寺",
+      "tags": [],
+      "image": "photos/风景/P1050302-1762267827217.JPG"
+    },
+    {
+      "id": 15,
+      "title": "P1050351",
+      "description": "👁️ 查看照片集",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "👁️ 查看照片集",
+      "tags": [],
+      "image": "photos/风景/P1050351-1762267869290.JPG"
+    },
+    {
+      "id": 16,
+      "title": "P1050351",
+      "description": "👁️ 查看照片集",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "👁️ 查看照片集",
+      "tags": [],
+      "image": "photos/风景/P1050351-1762267871914.JPG"
+    },
+    {
+      "id": 17,
+      "title": "P1050351",
+      "description": "👁️ 查看照片集",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "👁️ 查看照片集",
+      "tags": [],
+      "image": "photos/风景/P1050351-1762267873148.JPG"
     }
   ]
 }
