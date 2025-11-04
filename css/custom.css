@@ -1,0 +1,208 @@
+/* ================================== 全局基础美化 ================================== */
+/* 重置默认间距，提升整体协调度 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* 统一过渡动画，更丝滑 */
+}
+
+/* 全局字体优化（适配中文+代码，提升可读性） */
+body {
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.8; /* 行高优化，缓解阅读疲劳 */
+  color: #333;
+  background-color: #f8f9fa; /* 更柔和的背景色，替代原 #f5f7fa */
+}
+
+/* 链接样式优化（避免刺眼，hover有层次） */
+a {
+  color: #49B1F5; /* 与主题主色一致 */
+  text-decoration: none;
+  position: relative;
+}
+a:hover {
+  color: #3594d8; /* 加深色，hover不突兀 */
+}
+/* 链接下划线动画（高级感细节） */
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #49B1F5;
+  transition: width 0.3s ease;
+}
+a:hover::after {
+  width: 100%;
+}
+
+/* ================================== 导航栏美化 ================================== */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important; /* 半透明白，更通透 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 淡阴影，不厚重 */
+  backdrop-filter: blur(8px); /* 毛玻璃效果，高级感拉满 */
+}
+/* 导航菜单 hover 效果 */
+.menu-item a {
+  color: #666 !important;
+  padding: 0 12px !important;
+}
+.menu-item a:hover {
+  color: #49B1F5 !important;
+  transform: translateY(-1px); /* 轻微上移，交互反馈 */
+}
+
+/* ================================== 首页文章卡片美化 ================================== */
+.post-card {
+  background-color: #fff;
+  border-radius: 12px !important; /* 圆润圆角，更现代 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); /* 柔和阴影，不突兀 */
+  border: none !important;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+/* 卡片 hover 上浮效果（层次感） */
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+/* 文章封面图优化 */
+.post-card .cover {
+  border-radius: 12px 12px 0 0 !important;
+  height: 180px !important; /* 统一封面高度，更整齐 */
+  object-fit: cover; /* 封面图不拉伸 */
+}
+/* 文章标题样式 */
+.post-card .post-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin: 15px 0 10px !important;
+  color: #222 !important;
+}
+.post-card .post-title:hover {
+  color: #49B1F5 !important;
+}
+/* 文章摘要样式 */
+.post-card .post-excerpt {
+  color: #777 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+/* ================================== 侧边栏美化 ================================== */
+.aside {
+  background-color: #fff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+  border: none !important;
+  padding: 20px !important;
+  margin-top: 25px !important;
+}
+/* 侧边栏卡片样式 */
+.card {
+  border-radius: 8px !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-bottom: 20px !important;
+  background-color: #fafafa !important;
+}
+/* 侧边栏标题 */
+.card-header {
+  color: #333 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid #eee !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 15px !important;
+}
+/* 标签云美化 */
+.tag-cloud a {
+  padding: 4px 10px !important;
+  margin: 0 4px 8px 0 !important;
+  border-radius: 20px !important; /* 圆形标签，更精致 */
+  background-color: #f0f7ff !important;
+  color: #49B1F5 !important;
+}
+.tag-cloud a:hover {
+  background-color: #49B1F5 !important;
+  color: #fff !important;
+  transform: scale(1.05); /* 轻微放大，交互反馈 */
+}
+
+/* ================================== 文章内容区美化 ================================== */
+.post-content {
+  background-color: #fff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+  padding: 30px !important;
+  margin-top: 25px !important;
+}
+/* 文章标题 */
+.post-title {
+  color: #222 !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  margin-bottom: 20px !important;
+  border-bottom: 1px solid #eee !important;
+  padding-bottom: 15px !important;
+}
+/* 文章段落间距 */
+.post-content p {
+  margin-bottom: 18px !important;
+  font-size: 15px !important;
+}
+/* 代码块美化（增强对比度，更易读） */
+.hljs {
+  border-radius: 8px !important;
+  padding: 1.5em !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  background-color: #2d2d2d !important; /* 深色背景，保护视力 */
+}
+/* Mac风格代码块优化 */
+.code-mac {
+  border-radius: 8px 8px 0 0 !important;
+  background-color: #2d2d2d !important;
+}
+
+/* ================================== 按钮/交互元素美化 ================================== */
+/* 全局按钮样式 */
+.btn {
+  border-radius: 8px !important;
+  padding: 6px 16px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  background-color: #49B1F5 !important;
+  color: #fff !important;
+}
+.btn:hover {
+  background-color: #3594d8 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(73, 177, 245, 0.3);
+}
+/* 阅读模式按钮 */
+#readmode-btn, #darkmode-btn {
+  border-radius: 50% !important; /* 圆形按钮 */
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* ================================== 响应式优化（移动端适配） ================================== */
+@media (max-width: 768px) {
+  .post-content {
+    padding: 20px !important;
+  }
+  .aside {
+    padding: 15px !important;
+  }
+  .post-card .cover {
+    height: 140px !important;
+  }
+}
