@@ -2,197 +2,103 @@
   "photos": [
     {
       "id": 1,
-      "title": "美丽的日出",
-      "description": "清晨在山顶拍摄的壮丽日出",
-      "category": "风景",
-      "date": "2024-01-15",
-      "location": "黄山",
-      "tags": [
-        "日出",
-        "山脉",
-        "自然"
-      ],
-      "image": "sunrise.jpg"
-    },
-    {
-      "id": 2,
-      "title": "城市夜景",
-      "description": "繁华都市的璀璨夜景",
-      "category": "城市",
-      "date": "2024-02-20",
-      "location": "上海",
-      "tags": [
-        "夜景",
-        "城市",
-        "灯光"
-      ],
-      "image": "city-night.jpg"
-    },
-    {
-      "id": 3,
-      "title": "编程工作台",
-      "description": "日常编程工作的桌面环境",
-      "category": "技术",
-      "date": "2024-03-10",
-      "location": "家中",
-      "tags": [
-        "编程",
-        "工作",
-        "技术"
-      ],
-      "image": "coding-desk.jpg"
-    },
-    {
-      "id": 4,
-      "title": "美食盛宴",
-      "description": "丰盛的美食大餐",
-      "category": "美食",
-      "date": "2024-04-05",
-      "location": "餐厅",
-      "tags": [
-        "美食",
-        "餐饮",
-        "美味"
-      ],
-      "image": "delicious-food.jpg"
-    },
-    {
-      "id": 5,
-      "title": "旅行记忆",
-      "description": "旅途中的精彩瞬间",
-      "category": "旅行",
-      "date": "2024-05-12",
-      "location": "云南",
-      "tags": [
-        "旅行",
-        "风景",
-        "冒险"
-      ],
-      "image": "travel-memory.jpg"
-    },
-    {
-      "id": 6,
-      "title": "个人作品",
-      "description": "创作的艺术作品展示",
-      "category": "作品",
-      "date": "2024-06-08",
-      "location": "工作室",
-      "tags": [
-        "艺术",
-        "创作",
-        "作品"
-      ],
-      "image": "artwork.jpg"
-    },
-    {
-      "id": 7,
       "title": "P1050344",
       "description": "东山寺",
       "category": "风景",
       "date": "2025-11-04",
       "location": "东山寺",
       "tags": [],
-      "image": "photos/uncategorized/P1050344-1762265258761.JPG"
+      "image": "photos/风景/P1050344-1762265258761.JPG"
     },
     {
-      "id": 8,
+      "id": 2,
       "title": "P1050607 (1)",
       "description": "黄金大道",
       "category": "风景",
       "date": "2025-11-04",
       "location": "黄金大道",
       "tags": [],
-      "image": "photos/uncategorized/P1050607-1762265761705.JPG"
+      "image": "photos/风景/P1050607-1762265761705.JPG"
     },
     {
-      "id": 9,
-      "title": "P1050607 (2)",
-      "description": "黄金大道",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "黄金大道",
-      "tags": [],
-      "image": "photos/uncategorized/P1050625-1762265761766.JPG"
-    },
-    {
-      "id": 10,
-      "title": "P1050607 (3)",
-      "description": "黄金大道",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "黄金大道",
-      "tags": [],
-      "image": "photos/uncategorized/P1050626-1762265761823.JPG"
-    },
-    {
-      "id": 11,
+      "id": 3,
       "title": "云顶花海",
       "description": "云顶花海",
       "category": "风景",
       "date": "2025-11-04",
       "location": "云顶花海",
       "tags": [],
-      "image": "photos/uncategorized/P1050176-1762265790386.JPG"
+      "image": "photos/风景/P1050176-1762265790386.JPG"
     },
     {
-      "id": 12,
-      "title": "东山寺",
-      "description": "东山寺",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "东山寺",
-      "tags": [],
-      "image": "photos/uncategorized/P1050302-1762267749314.JPG"
-    },
-    {
-      "id": 13,
-      "title": "东山寺",
-      "description": "东山寺",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "东山寺",
-      "tags": [],
-      "image": "photos/uncategorized/P1050302-1762267777934.JPG"
-    },
-    {
-      "id": 14,
+      "id": 4,
       "title": "东山寺远",
       "description": "东山寺远",
       "category": "风景",
       "date": "2025-11-04",
       "location": "东山寺",
       "tags": [],
-      "image": "photos/uncategorized/P1050302-1762267827217.JPG"
+      "image": "photos/风景/P1050302-1762267827217.JPG"
     },
     {
-      "id": 15,
-      "title": "P1050351",
-      "description": "👁️ 查看照片集",
+      "id": 5,
+      "title": "晚霞",
+      "description": "和子登、代队爬山，又是满满收获的一天",
       "category": "风景",
-      "date": "2025-11-04",
-      "location": "👁️ 查看照片集",
+      "date": "2025-09-13",
+      "location": "东山寺山顶",
       "tags": [],
-      "image": "photos/uncategorized/P1050351-1762267869290.JPG"
+      "image": "photos/风景/P1050337-1762308350034.JPG"
     },
     {
-      "id": 16,
-      "title": "P1050351",
-      "description": "👁️ 查看照片集",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "👁️ 查看照片集",
+      "id": 6,
+      "title": "合照",
+      "description": "和辉哥，梦洁到海洋馆一游",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "贵阳极地海洋博物馆",
       "tags": [],
-      "image": "photos/uncategorized/P1050351-1762267871914.JPG"
+      "image": "photos/生活/P1050374-1762308732871.JPG"
     },
     {
-      "id": 17,
-      "title": "P1050351",
-      "description": "👁️ 查看照片集",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "👁️ 查看照片集",
+      "id": 7,
+      "title": "合照（3）",
+      "description": "在黄金大道，和表弟表哥合照",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "花溪黄金大道",
       "tags": [],
-      "image": "photos/uncategorized/P1050351-1762267873148.JPG"
+      "image": "photos/生活/P1050615-1762309222771.JPG"
+    },
+    {
+      "id": 8,
+      "title": "晚霞和她",
+      "description": "在东山寺和梦洁",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "贵阳东山寺",
+      "tags": [],
+      "image": "photos/生活/P1050385-1762309439701.JPG"
+    },
+    {
+      "id": 9,
+      "title": "她",
+      "description": "和梦洁，在极地海洋馆",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "贵阳极地海洋馆",
+      "tags": [],
+      "image": "photos/生活/P1050371-1762309514065.JPG"
+    },
+    {
+      "id": 10,
+      "title": "邂逅一个下午",
+      "description": "黄金大道和她",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "花溪黄金大道",
+      "tags": [],
+      "image": "photos/生活/P1050623-1762309572545.JPG"
     }
   ]
 }
