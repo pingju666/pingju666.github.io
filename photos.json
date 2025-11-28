@@ -99,6 +99,26 @@
       "location": "花溪黄金大道",
       "tags": [],
       "image": "photos/生活/P1050623-1762309572545.JPG"
+    },
+    {
+      "id": 11,
+      "title": "花溪公园",
+      "description": "",
+      "category": "生活",
+      "date": "2025-11-28",
+      "location": "花溪公园",
+      "tags": [],
+      "image": "photos/生活/P1050717-1764337225791.JPG"
+    },
+    {
+      "id": 12,
+      "title": "花溪公园_1",
+      "description": "花溪公园",
+      "category": "生活",
+      "date": "2025-11-28",
+      "location": "花溪公园",
+      "tags": [],
+      "image": "photos/生活/P1050739-1764337327651.JPG"
     }
   ]
 }
