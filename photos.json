@@ -2,106 +2,6 @@
   "photos": [
     {
       "id": 1,
-      "title": "P1050344",
-      "description": "东山寺",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "东山寺",
-      "tags": [],
-      "image": "photos/风景/P1050344-1762265258761.JPG"
-    },
-    {
-      "id": 2,
-      "title": "P1050607 (1)",
-      "description": "黄金大道",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "黄金大道",
-      "tags": [],
-      "image": "photos/风景/P1050607-1762265761705.JPG"
-    },
-    {
-      "id": 3,
-      "title": "云顶花海",
-      "description": "云顶花海",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "云顶花海",
-      "tags": [],
-      "image": "photos/风景/P1050176-1762265790386.JPG"
-    },
-    {
-      "id": 4,
-      "title": "东山寺远",
-      "description": "东山寺远",
-      "category": "风景",
-      "date": "2025-11-04",
-      "location": "东山寺",
-      "tags": [],
-      "image": "photos/风景/P1050302-1762267827217.JPG"
-    },
-    {
-      "id": 5,
-      "title": "晚霞",
-      "description": "和子登、代队爬山，又是满满收获的一天",
-      "category": "风景",
-      "date": "2025-09-13",
-      "location": "东山寺山顶",
-      "tags": [],
-      "image": "photos/风景/P1050337-1762308350034.JPG"
-    },
-    {
-      "id": 6,
-      "title": "合照",
-      "description": "和辉哥，梦洁到海洋馆一游",
-      "category": "生活",
-      "date": "2025-11-05",
-      "location": "贵阳极地海洋博物馆",
-      "tags": [],
-      "image": "photos/生活/P1050374-1762308732871.JPG"
-    },
-    {
-      "id": 7,
-      "title": "合照（3）",
-      "description": "在黄金大道，和表弟表哥合照",
-      "category": "生活",
-      "date": "2025-11-05",
-      "location": "花溪黄金大道",
-      "tags": [],
-      "image": "photos/生活/P1050615-1762309222771.JPG"
-    },
-    {
-      "id": 8,
-      "title": "晚霞和她",
-      "description": "在东山寺和梦洁",
-      "category": "生活",
-      "date": "2025-11-05",
-      "location": "贵阳东山寺",
-      "tags": [],
-      "image": "photos/生活/P1050385-1762309439701.JPG"
-    },
-    {
-      "id": 9,
-      "title": "她",
-      "description": "和梦洁，在极地海洋馆",
-      "category": "生活",
-      "date": "2025-11-05",
-      "location": "贵阳极地海洋馆",
-      "tags": [],
-      "image": "photos/生活/P1050371-1762309514065.JPG"
-    },
-    {
-      "id": 10,
-      "title": "邂逅一个下午",
-      "description": "黄金大道和她",
-      "category": "生活",
-      "date": "2025-11-05",
-      "location": "花溪黄金大道",
-      "tags": [],
-      "image": "photos/生活/P1050623-1762309572545.JPG"
-    },
-    {
-      "id": 11,
       "title": "花溪公园",
       "description": "",
       "category": "生活",
@@ -111,7 +11,7 @@
       "image": "photos/生活/P1050717-1764337225791.JPG"
     },
     {
-      "id": 12,
+      "id": 2,
       "title": "花溪公园_1",
       "description": "花溪公园",
       "category": "生活",
@@ -119,6 +19,106 @@
       "location": "花溪公园",
       "tags": [],
       "image": "photos/生活/P1050739-1764337327651.JPG"
+    },
+    {
+      "id": 3,
+      "title": "合照",
+      "description": "和辉哥，梦洁到海洋馆一游",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "贵阳极地海洋博物馆",
+      "tags": [],
+      "image": "photos/生活/P1050374-1762308732871.JPG"
+    },
+    {
+      "id": 4,
+      "title": "合照（3）",
+      "description": "在黄金大道，和表弟表哥合照",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "花溪黄金大道",
+      "tags": [],
+      "image": "photos/生活/P1050615-1762309222771.JPG"
+    },
+    {
+      "id": 5,
+      "title": "晚霞和她",
+      "description": "在东山寺和梦洁",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "贵阳东山寺",
+      "tags": [],
+      "image": "photos/生活/P1050385-1762309439701.JPG"
+    },
+    {
+      "id": 6,
+      "title": "她",
+      "description": "和梦洁，在极地海洋馆",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "贵阳极地海洋馆",
+      "tags": [],
+      "image": "photos/生活/P1050371-1762309514065.JPG"
+    },
+    {
+      "id": 7,
+      "title": "邂逅一个下午",
+      "description": "黄金大道和她",
+      "category": "生活",
+      "date": "2025-11-05",
+      "location": "花溪黄金大道",
+      "tags": [],
+      "image": "photos/生活/P1050623-1762309572545.JPG"
+    },
+    {
+      "id": 8,
+      "title": "P1050344",
+      "description": "东山寺",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "东山寺",
+      "tags": [],
+      "image": "photos/风景/P1050344-1762265258761.JPG"
+    },
+    {
+      "id": 9,
+      "title": "P1050607 (1)",
+      "description": "黄金大道",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "黄金大道",
+      "tags": [],
+      "image": "photos/风景/P1050607-1762265761705.JPG"
+    },
+    {
+      "id": 10,
+      "title": "云顶花海",
+      "description": "云顶花海",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "云顶花海",
+      "tags": [],
+      "image": "photos/风景/P1050176-1762265790386.JPG"
+    },
+    {
+      "id": 11,
+      "title": "东山寺远",
+      "description": "东山寺远",
+      "category": "风景",
+      "date": "2025-11-04",
+      "location": "东山寺",
+      "tags": [],
+      "image": "photos/风景/P1050302-1762267827217.JPG"
+    },
+    {
+      "id": 12,
+      "title": "晚霞",
+      "description": "和子登、代队爬山，又是满满收获的一天",
+      "category": "风景",
+      "date": "2025-09-13",
+      "location": "东山寺山顶",
+      "tags": [],
+      "image": "photos/风景/P1050337-1762308350034.JPG"
     }
   ]
 }
