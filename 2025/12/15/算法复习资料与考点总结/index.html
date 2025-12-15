@@ -1,0 +1,861 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>算法复习资料与考点总结 | 凭据的博客 | 技术分享与生活记录</title><meta name="author" content="yunpeng Long,2196683912@qq.com"><meta name="copyright" content="yunpeng Long"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="全面的算法复习资料与考点总结，涵盖机器学习基础概念、监督学习算法、无监督学习算法、集成学习方法、深度学习基础、数据预处理与特征工程、模型评估与优化、关联规则挖掘等核心知识点，包含详细的算法过程和计算题解析。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法复习资料与考点总结">
+<meta property="og:url" content="https://pingju666.github.io/2025/12/15/%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8E%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="凭据的博客 | 技术分享与生活记录">
+<meta property="og:description" content="全面的算法复习资料与考点总结，涵盖机器学习基础概念、监督学习算法、无监督学习算法、集成学习方法、深度学习基础、数据预处理与特征工程、模型评估与优化、关联规则挖掘等核心知识点，包含详细的算法过程和计算题解析。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pingju666.github.io/img/avatar.png">
+<meta property="article:published_time" content="2025-12-15T03:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-15T07:44:14.064Z">
+<meta property="article:author" content="yunpeng Long">
+<meta property="article:tag" content="算法, 机器学习, 考点总结, 复习资料, 数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pingju666.github.io/img/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "算法复习资料与考点总结",
+  "url": "https://pingju666.github.io/2025/12/15/%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8E%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/",
+  "image": "https://pingju666.github.io/img/avatar.png",
+  "datePublished": "2025-12-15T03:00:00.000Z",
+  "dateModified": "2025-12-15T07:44:14.064Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "yunpeng Long",
+      "url": "https://pingju666.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://pingju666.github.io/2025/12/15/%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8E%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/null"/><link rel="apple-touch-icon" sizes="180x180" href="/img/avatar.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '算法复习资料与考点总结',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/photos/"><i class="fa-fw fas fa-camera"></i><span> Photos</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">凭据的博客 | 技术分享与生活记录</span></a><a class="nav-page-title" href="/"><span class="site-name">算法复习资料与考点总结</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/photos/"><i class="fa-fw fas fa-camera"></i><span> Photos</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">算法复习资料与考点总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-15T03:00:00.000Z" title="发表于 2025-12-15 11:00:00">2025-12-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-15T07:44:14.064Z" title="更新于 2025-12-15 15:44:14">2025-12-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="算法复习资料与考点总结"><a href="#算法复习资料与考点总结" class="headerlink" title="算法复习资料与考点总结"></a>算法复习资料与考点总结</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li><a href="#1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">机器学习基础概念</a></li>
+<li><a href="#2-%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95">监督学习算法</a></li>
+<li><a href="#3-%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95">无监督学习算法</a></li>
+<li><a href="#4-%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95">集成学习方法</a></li>
+<li><a href="#5-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80">深度学习基础</a></li>
+<li><a href="#6-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E4%B8%8E%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B">数据预处理与特征工程</a></li>
+<li><a href="#7-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E4%BC%98%E5%8C%96">模型评估与优化</a></li>
+<li><a href="#8-%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E6%8C%96%E6%8E%98">关联规则挖掘</a></li>
+<li><a href="#9-%E9%87%8D%E7%82%B9%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3">重点算法详解</a></li>
+<li><a href="#10-%E8%80%83%E8%AF%95%E9%87%8D%E7%82%B9%E9%A2%98%E5%9E%8B%E5%88%86%E6%9E%90">考试重点题型分析</a></li>
+</ol>
+<hr>
+<h2 id="1-机器学习基础概念"><a href="#1-机器学习基础概念" class="headerlink" title="1. 机器学习基础概念"></a>1. 机器学习基础概念</h2><h3 id="1-1-机器学习分类"><a href="#1-1-机器学习分类" class="headerlink" title="1.1 机器学习分类"></a>1.1 机器学习分类</h3><h4 id="1-1-1-按任务类型分类"><a href="#1-1-1-按任务类型分类" class="headerlink" title="1.1.1 按任务类型分类"></a>1.1.1 按任务类型分类</h4><p><strong>监督学习（Supervised Learning）</strong></p>
+<ul>
+<li><strong>定义</strong>：使用标注数据进行训练的学习方法</li>
+<li><strong>任务类型</strong>：<ul>
+<li><strong>分类问题</strong>：预测离散值（如垃圾邮件检测、图像分类）</li>
+<li><strong>回归问题</strong>：预测连续值（如房价预测、股票价格）</li>
+</ul>
+</li>
+<li><strong>特点</strong>：有明确的目标标签，模型学习输入与输出的映射关系</li>
+</ul>
+<p><strong>无监督学习（Unsupervised Learning）</strong></p>
+<ul>
+<li><strong>定义</strong>：使用未标注数据进行训练的学习方法</li>
+<li><strong>任务类型</strong>：<ul>
+<li><strong>聚类问题</strong>：将相似数据分组（如客户分群、图像分割）</li>
+<li><strong>降维问题</strong>：减少特征维度（如PCA、t-SNE）</li>
+<li><strong>关联规则</strong>：发现数据项之间的关联关系</li>
+</ul>
+</li>
+<li><strong>特点</strong>：没有明确的目标标签，模型发现数据内在结构</li>
+</ul>
+<p><strong>半监督学习（Semi-supervised Learning）</strong></p>
+<ul>
+<li><strong>定义</strong>：结合少量标注数据和大量未标注数据的学习方法</li>
+<li><strong>应用场景</strong>：标注数据稀缺但未标注数据丰富的场景</li>
+</ul>
+<h4 id="1-1-2-监督学习与无监督学习的主要区别"><a href="#1-1-2-监督学习与无监督学习的主要区别" class="headerlink" title="1.1.2 监督学习与无监督学习的主要区别"></a>1.1.2 监督学习与无监督学习的主要区别</h4><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>监督学习</th>
+<th>无监督学习</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据标注</td>
+<td>有标注数据</td>
+<td>无标注数据</td>
+</tr>
+<tr>
+<td>学习目标</td>
+<td>学习输入-输出映射关系</td>
+<td>发现数据内在结构</td>
+</tr>
+<tr>
+<td>评估方式</td>
+<td>有明确的评估指标</td>
+<td>评估相对困难</td>
+</tr>
+<tr>
+<td>应用场景</td>
+<td>预测和分类</td>
+<td>发现模式和结构</td>
+</tr>
+</tbody></table>
+<h3 id="1-2-分类与回归的区别"><a href="#1-2-分类与回归的区别" class="headerlink" title="1.2 分类与回归的区别"></a>1.2 分类与回归的区别</h3><h4 id="1-2-1-分类问题"><a href="#1-2-1-分类问题" class="headerlink" title="1.2.1 分类问题"></a>1.2.1 分类问题</h4><ul>
+<li><strong>定义</strong>：预测离散值的任务</li>
+<li><strong>输出</strong>：类别标签（如：垃圾邮件&#x2F;正常邮件）</li>
+<li><strong>评估指标</strong>：准确率、精确率、召回率、F1分数</li>
+<li><strong>典型算法</strong>：逻辑回归、决策树、SVM、随机森林</li>
+</ul>
+<h4 id="1-2-2-回归问题"><a href="#1-2-2-回归问题" class="headerlink" title="1.2.2 回归问题"></a>1.2.2 回归问题</h4><ul>
+<li><strong>定义</strong>：预测连续值的任务</li>
+<li><strong>输出</strong>：数值（如：房价、股票价格）</li>
+<li><strong>评估指标</strong>：均方误差(MSE)、平均绝对误差(MAE)、R²</li>
+<li><strong>典型算法</strong>：线性回归、多项式回归、随机森林回归</li>
+</ul>
+<h4 id="1-2-3-区别总结"><a href="#1-2-3-区别总结" class="headerlink" title="1.2.3 区别总结"></a>1.2.3 区别总结</h4><ul>
+<li><strong>输出类型</strong>：分类输出离散值，回归输出连续值</li>
+<li><strong>目标函数</strong>：分类使用分类损失，回归使用回归损失</li>
+<li><strong>应用领域</strong>：分类用于模式识别，回归用于数值预测</li>
+</ul>
+<hr>
+<h2 id="2-监督学习算法"><a href="#2-监督学习算法" class="headerlink" title="2. 监督学习算法"></a>2. 监督学习算法</h2><h3 id="2-1-支持向量机（SVM）"><a href="#2-1-支持向量机（SVM）" class="headerlink" title="2.1 支持向量机（SVM）"></a>2.1 支持向量机（SVM）</h3><h4 id="2-1-1-SVM基本原理"><a href="#2-1-1-SVM基本原理" class="headerlink" title="2.1.1 SVM基本原理"></a>2.1.1 SVM基本原理</h4><p><strong>目标</strong>：寻找最优分类超平面，最大化分类间隔</p>
+<p><strong>核函数的作用</strong>：</p>
+<ul>
+<li><strong>定义</strong>：将低维空间中的非线性数据映射到高维空间</li>
+<li><strong>目的</strong>：使原本线性不可分的数据在高维空间中线性可分</li>
+<li><strong>优势</strong>：避免直接在高维空间中进行计算（核技巧）</li>
+</ul>
+<p><strong>常用核函数</strong>：</p>
+<ul>
+<li><strong>线性核</strong>：K(x,y) &#x3D; x·y</li>
+<li><strong>多项式核</strong>：K(x,y) &#x3D; (x·y + c)^d</li>
+<li><strong>高斯核（RBF）</strong>：K(x,y) &#x3D; exp(-γ||x-y||²)</li>
+<li><strong>Sigmoid核</strong>：K(x,y) &#x3D; tanh(γx·y + r)</li>
+</ul>
+<h4 id="2-1-2-SVM公式推导"><a href="#2-1-2-SVM公式推导" class="headerlink" title="2.1.2 SVM公式推导"></a>2.1.2 SVM公式推导</h4><p><strong>1. 线性可分情况</strong></p>
+<p>给定训练数据 {(x₁,y₁), (x₂,y₂), …, (xₙ,yₙ)}，其中 yᵢ ∈ {+1, -1}</p>
+<p>目标是找到分类超平面：w·x + b &#x3D; 0</p>
+<p><strong>约束条件</strong>：</p>
+<ul>
+<li>yᵢ(w·xᵢ + b) ≥ 1, for all i</li>
+</ul>
+<p><strong>优化目标</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">minimize (1/2)||w||²</span><br><span class="line">subject to yᵢ(w·xᵢ + b) ≥ 1, i = 1,2,...,n</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 拉格朗日乘数法</strong></p>
+<p>引入拉格朗日乘数 αᵢ ≥ 0：</p>
+<p>L(w,b,α) &#x3D; (1&#x2F;2)||w||² - Σαᵢ[yᵢ(w·xᵢ + b) - 1]</p>
+<p><strong>3. 对偶问题</strong></p>
+<p>最大化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">W(α) = Σαᵢ - (1/2)ΣΣαᵢαⱼyᵢyⱼ(xᵢ·xⱼ)</span><br></pre></td></tr></table></figure>
+
+<p>约束条件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Σαᵢyᵢ = 0</span><br><span class="line">αᵢ ≥ 0, i = 1,2,...,n</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 核技巧应用</strong></p>
+<p>将内积 xᵢ·xⱼ 替换为核函数 K(xᵢ,xⱼ)：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">W(α) = Σαᵢ - (1/2)ΣΣαᵢαⱼyᵢyⱼK(xᵢ,xⱼ)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-k近邻算法（k-NN）"><a href="#2-2-k近邻算法（k-NN）" class="headerlink" title="2.2 k近邻算法（k-NN）"></a>2.2 k近邻算法（k-NN）</h3><h4 id="2-2-1-算法过程"><a href="#2-2-1-算法过程" class="headerlink" title="2.2.1 算法过程"></a>2.2.1 算法过程</h4><ol>
+<li><strong>计算距离</strong>：计算待分类样本与训练集中每个样本的距离</li>
+<li><strong>选择邻居</strong>：选择距离最近的k个样本</li>
+<li><strong>投票决策</strong>：根据k个邻居的类别进行投票</li>
+<li><strong>返回结果</strong>：返回得票最多的类别（分类）或计算平均值（回归）</li>
+</ol>
+<h4 id="2-2-2-k值选择的影响"><a href="#2-2-2-k值选择的影响" class="headerlink" title="2.2.2 k值选择的影响"></a>2.2.2 k值选择的影响</h4><ul>
+<li><strong>k值过小</strong>：<ul>
+<li>容易导致过拟合</li>
+<li>对噪声数据敏感</li>
+<li>决策边界复杂</li>
+</ul>
+</li>
+<li><strong>k值过大</strong>：<ul>
+<li>容易导致欠拟合</li>
+<li>对噪声不敏感</li>
+<li>决策边界平滑</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-2-3-距离度量"><a href="#2-2-3-距离度量" class="headerlink" title="2.2.3 距离度量"></a>2.2.3 距离度量</h4><ul>
+<li><strong>欧几里得距离</strong>：d(x,y) &#x3D; √Σ(xᵢ-yᵢ)²</li>
+<li><strong>曼哈顿距离</strong>：d(x,y) &#x3D; Σ|xᵢ-yᵢ|</li>
+<li><strong>余弦距离</strong>：d(x,y) &#x3D; 1 - cos(θ)</li>
+</ul>
+<h3 id="2-3-决策树算法"><a href="#2-3-决策树算法" class="headerlink" title="2.3 决策树算法"></a>2.3 决策树算法</h3><h4 id="2-3-1-ID3算法过程"><a href="#2-3-1-ID3算法过程" class="headerlink" title="2.3.1 ID3算法过程"></a>2.3.1 ID3算法过程</h4><p><strong>1. 算法概述</strong></p>
+<ul>
+<li><strong>基础</strong>：以信息论的熵为基础</li>
+<li><strong>指标</strong>：以信息增益为”属性测试条件”</li>
+<li><strong>目标</strong>：选择信息增益最大的属性作为分裂节点</li>
+</ul>
+<p><strong>2. 算法步骤</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ID3(TrainingData, TargetAttribute):</span><br><span class="line">1. 如果所有样本属于同一类别，返回该类别</span><br><span class="line">2. 如果没有属性可以分裂，返回样本最多的类别</span><br><span class="line">3. 计算所有候选属性的信息增益</span><br><span class="line">4. 选择信息增益最大的属性A</span><br><span class="line">5. 为属性A的每个值创建分支</span><br><span class="line">6. 递归处理每个分支</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 信息增益计算</strong></p>
+<p>熵的计算：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H(S) = -Σpᵢlog₂(pᵢ)</span><br></pre></td></tr></table></figure>
+<p>其中 pᵢ 是类别i在样本集S中的比例</p>
+<p>信息增益的计算：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Gain(S,A) = H(S) - Σ(|Sᵥ|/|S|)H(Sᵥ)</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li>Sᵥ是属性A取值为v的样本子集</li>
+<li>|Sᵥ|是Sᵢ的大小</li>
+<li>|S|是S的大小</li>
+</ul>
+<h4 id="2-3-2-决策树剪枝"><a href="#2-3-2-决策树剪枝" class="headerlink" title="2.3.2 决策树剪枝"></a>2.3.2 决策树剪枝</h4><p><strong>预剪枝（Pre-pruning）</strong></p>
+<ul>
+<li><strong>定义</strong>：在决策树构建过程中进行剪枝</li>
+<li><strong>方法</strong>：设置分裂阈值，如信息增益小于阈值则停止分裂</li>
+<li><strong>优点</strong>：防止过拟合，节省训练时间</li>
+<li><strong>缺点</strong>：可能欠拟合</li>
+</ul>
+<p><strong>后剪枝（Post-pruning）</strong></p>
+<ul>
+<li><strong>定义</strong>：先构建完整的决策树，然后进行剪枝</li>
+<li><strong>方法</strong>：从叶节点向上剪枝，评估剪枝后的性能</li>
+<li><strong>优点</strong>：通常性能更好</li>
+<li><strong>缺点</strong>：训练时间长</li>
+</ul>
+<h3 id="2-4-贝叶斯分类算法"><a href="#2-4-贝叶斯分类算法" class="headerlink" title="2.4 贝叶斯分类算法"></a>2.4 贝叶斯分类算法</h3><h4 id="2-4-1-贝叶斯定理"><a href="#2-4-1-贝叶斯定理" class="headerlink" title="2.4.1 贝叶斯定理"></a>2.4.1 贝叶斯定理</h4><p><strong>公式</strong>：P(A|B) &#x3D; P(B|A)P(A)&#x2F;P(B)</p>
+<p><strong>含义</strong>：</p>
+<ul>
+<li>P(A|B)：给定B时A的条件概率（后验概率）</li>
+<li>P(B|A)：给定A时B的条件概率（似然）</li>
+<li>P(A)：A的先验概率</li>
+<li>P(B)：B的边际概率</li>
+</ul>
+<h4 id="2-4-2-朴素贝叶斯分类过程"><a href="#2-4-2-朴素贝叶斯分类过程" class="headerlink" title="2.4.2 朴素贝叶斯分类过程"></a>2.4.2 朴素贝叶斯分类过程</h4><p><strong>1. 训练阶段</strong></p>
+<ul>
+<li>计算先验概率：P(C) &#x3D; Nᵢ&#x2F;N</li>
+<li>计算条件概率：P(Xᵢ|C) &#x3D; count(Xᵢ,C)&#x2F;count(C)</li>
+</ul>
+<p><strong>2. 分类阶段</strong><br>对于待分类样本x：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P(C|x) ∝ P(C)∏P(xᵢ|C)</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 预测</strong><br>选择后验概率最大的类别：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ŷ = argmax P(C|x)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-无监督学习算法"><a href="#3-无监督学习算法" class="headerlink" title="3. 无监督学习算法"></a>3. 无监督学习算法</h2><h3 id="3-1-K-means聚类"><a href="#3-1-K-means聚类" class="headerlink" title="3.1 K-means聚类"></a>3.1 K-means聚类</h3><h4 id="3-1-1-算法过程"><a href="#3-1-1-算法过程" class="headerlink" title="3.1.1 算法过程"></a>3.1.1 算法过程</h4><p><strong>1. 初始化</strong></p>
+<ul>
+<li>选择聚类数量k</li>
+<li>随机选择k个初始聚类中心</li>
+</ul>
+<p><strong>2. 迭代过程</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">重复直到收敛：</span><br><span class="line">1. 分配：将每个数据点分配到最近的聚类中心</span><br><span class="line">2. 更新：重新计算聚类中心为该簇的均值</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 收敛条件</strong></p>
+<ul>
+<li>聚类中心不再发生变化</li>
+<li>目标函数变化小于阈值</li>
+<li>达到最大迭代次数</li>
+</ul>
+<h4 id="3-1-2-目标函数"><a href="#3-1-2-目标函数" class="headerlink" title="3.1.2 目标函数"></a>3.1.2 目标函数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">J = Σᵢ Σₓ ||xᵢ - μⱼ||²</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li>xᵢ：数据点</li>
+<li>μⱼ：第j个聚类中心</li>
+</ul>
+<h3 id="3-2-主成分分析（PCA）"><a href="#3-2-主成分分析（PCA）" class="headerlink" title="3.2 主成分分析（PCA）"></a>3.2 主成分分析（PCA）</h3><h4 id="3-2-1-PCA核心思想"><a href="#3-2-1-PCA核心思想" class="headerlink" title="3.2.1 PCA核心思想"></a>3.2.1 PCA核心思想</h4><p><strong>定义</strong>：找到数据方差最大的方向，实现降维</p>
+<p><strong>目标</strong>：</p>
+<ul>
+<li>找到数据的主要变化方向（主成分）</li>
+<li>将高维数据投影到低维空间</li>
+<li>保持数据的主要信息</li>
+</ul>
+<h4 id="3-2-2-PCA算法过程"><a href="#3-2-2-PCA算法过程" class="headerlink" title="3.2.2 PCA算法过程"></a>3.2.2 PCA算法过程</h4><p><strong>1. 数据预处理</strong></p>
+<ul>
+<li>中心化：x’ &#x3D; x - μ</li>
+<li>标准化：除以标准差（可选）</li>
+</ul>
+<p><strong>2. 计算协方差矩阵</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = (1/n)X&#x27;ᵀX&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 特征值分解</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C = WΛWᵀ</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li>W：特征向量矩阵（主成分）</li>
+<li>Λ：特征值矩阵</li>
+</ul>
+<p><strong>4. 选择主成分</strong></p>
+<ul>
+<li>按特征值大小排序</li>
+<li>选择前k个主成分</li>
+</ul>
+<p><strong>5. 数据投影</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Y = X&#x27;Wₖ</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-3-PCA特点"><a href="#3-2-3-PCA特点" class="headerlink" title="3.2.3 PCA特点"></a>3.2.3 PCA特点</h4><ul>
+<li><strong>类型</strong>：无监督的线性降维方法</li>
+<li><strong>优点</strong>：简单有效，解释性强</li>
+<li><strong>缺点</strong>：线性变换，无法处理非线性结构</li>
+</ul>
+<hr>
+<h2 id="4-集成学习方法"><a href="#4-集成学习方法" class="headerlink" title="4. 集成学习方法"></a>4. 集成学习方法</h2><h3 id="4-1-集成学习基本概念"><a href="#4-1-集成学习基本概念" class="headerlink" title="4.1 集成学习基本概念"></a>4.1 集成学习基本概念</h3><p><strong>定义</strong>：通过结合多个学习器的预测结果来提高整体性能的方法</p>
+<p><strong>基本原理</strong>：</p>
+<ul>
+<li><strong>偏差-方差权衡</strong>：通过结合多个模型减少总误差</li>
+<li><strong>多样性</strong>：不同模型关注数据的不同方面</li>
+<li><strong>投票机制</strong>：通过多数投票或加权平均得到最终结果</li>
+</ul>
+<h3 id="4-2-Bagging"><a href="#4-2-Bagging" class="headerlink" title="4.2 Bagging"></a>4.2 Bagging</h3><p><strong>原理</strong>：通过袋外样本和特征随机性减少方差</p>
+<p><strong>代表算法</strong>：随机森林</p>
+<p><strong>随机森林特点</strong>：</p>
+<ul>
+<li>使用多个决策树</li>
+<li>每个树使用不同的训练样本（Bootstrap采样）</li>
+<li>每个节点分裂时使用随机特征子集</li>
+<li>最终预测通过投票或平均得到</li>
+</ul>
+<p><strong>减少方差的原因</strong>：</p>
+<ul>
+<li>多个模型的预测平均</li>
+<li>减少个别模型的异常影响</li>
+<li>提高模型稳定性</li>
+</ul>
+<h3 id="4-3-Boosting"><a href="#4-3-Boosting" class="headerlink" title="4.3 Boosting"></a>4.3 Boosting</h3><p><strong>原理</strong>：通过迭代训练减少偏差</p>
+<p><strong>代表算法</strong>：AdaBoost、Gradient Boosting</p>
+<p><strong>AdaBoost算法步骤</strong>：</p>
+<ol>
+<li>初始化样本权重</li>
+<li>训练弱分类器</li>
+<li>计算错误率和分类器权重</li>
+<li>更新样本权重</li>
+<li>重复步骤2-4</li>
+</ol>
+<p><strong>减少偏差的原因</strong>：</p>
+<ul>
+<li>关注之前分类错误的样本</li>
+<li>逐步改进模型性能</li>
+<li>组合多个弱分类器成为强分类器</li>
+</ul>
+<h3 id="4-4-Stacking"><a href="#4-4-Stacking" class="headerlink" title="4.4 Stacking"></a>4.4 Stacking</h3><p><strong>定义</strong>：堆叠多个模型的预测结果作为输入训练元学习器</p>
+<p><strong>结构</strong>：</p>
+<ul>
+<li><strong>基层模型</strong>：多个基础学习器</li>
+<li><strong>元学习器</strong>：使用基层模型输出作为输入</li>
+</ul>
+<hr>
+<h2 id="5-深度学习基础"><a href="#5-深度学习基础" class="headerlink" title="5. 深度学习基础"></a>5. 深度学习基础</h2><h3 id="5-1-神经网络基本结构"><a href="#5-1-神经网络基本结构" class="headerlink" title="5.1 神经网络基本结构"></a>5.1 神经网络基本结构</h3><h4 id="5-1-1-激活函数"><a href="#5-1-1-激活函数" class="headerlink" title="5.1.1 激活函数"></a>5.1.1 激活函数</h4><p><strong>定义</strong>：神经网络中的非线性函数，引入非线性特性</p>
+<p><strong>主要激活函数</strong>：</p>
+<p><strong>1. Sigmoid函数</strong></p>
+<ul>
+<li><strong>公式</strong>：f(x) &#x3D; 1&#x2F;(1+e^(-x))</li>
+<li><strong>范围</strong>：(0,1)</li>
+<li><strong>特点</strong>：平滑，连续可微</li>
+<li><strong>缺点</strong>：梯度消失，计算复杂</li>
+</ul>
+<p><strong>2. ReLU函数</strong></p>
+<ul>
+<li><strong>公式</strong>：f(x) &#x3D; max(0, x)</li>
+<li><strong>范围</strong>：[0,+∞)</li>
+<li><strong>特点</strong>：计算简单，缓解梯度消失</li>
+<li><strong>优点</strong>：广泛使用，效果好</li>
+</ul>
+<p><strong>3. Tanh函数</strong></p>
+<ul>
+<li><strong>公式</strong>：f(x) &#x3D; (e^x - e^(-x))&#x2F;(e^x + e^(-x))</li>
+<li><strong>范围</strong>：(-1,1)</li>
+<li><strong>特点</strong>：零中心化</li>
+<li><strong>缺点</strong>：梯度消失</li>
+</ul>
+<p><strong>4. Softmax函数</strong></p>
+<ul>
+<li><strong>公式</strong>：f(xᵢ) &#x3D; e^xᵢ&#x2F;Σⱼe^xⱼ</li>
+<li><strong>用途</strong>：多分类问题的输出层</li>
+<li><strong>特点</strong>：输出概率分布</li>
+</ul>
+<h4 id="5-1-2-反向传播算法"><a href="#5-1-2-反向传播算法" class="headerlink" title="5.1.2 反向传播算法"></a>5.1.2 反向传播算法</h4><p><strong>定义</strong>：用于计算神经网络参数梯度的算法</p>
+<p><strong>算法步骤</strong>：</p>
+<ol>
+<li><strong>前向传播</strong>：计算网络输出</li>
+<li><strong>计算损失</strong>：计算预测值与真实值的差异</li>
+<li><strong>反向传播</strong>：从输出层向输入层传播梯度</li>
+<li><strong>参数更新</strong>：使用梯度下降更新参数</li>
+</ol>
+<h3 id="5-2-深度学习技术"><a href="#5-2-深度学习技术" class="headerlink" title="5.2 深度学习技术"></a>5.2 深度学习技术</h3><h4 id="5-2-1-Dropout"><a href="#5-2-1-Dropout" class="headerlink" title="5.2.1 Dropout"></a>5.2.1 Dropout</h4><p><strong>定义</strong>：防止过拟合的正则化技术</p>
+<p><strong>原理</strong>：</p>
+<ul>
+<li>训练时随机丢弃部分神经元</li>
+<li>减少神经元间的依赖</li>
+<li>提高模型泛化能力</li>
+</ul>
+<p><strong>实现</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">训练时：y = f(Wx) * mask</span><br><span class="line">预测时：y = f(Wx) * p</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2-2-批量归一化（Batch-Normalization）"><a href="#5-2-2-批量归一化（Batch-Normalization）" class="headerlink" title="5.2.2 批量归一化（Batch Normalization）"></a>5.2.2 批量归一化（Batch Normalization）</h4><p><strong>主要好处</strong>：</p>
+<ul>
+<li><strong>加速训练</strong>：允许更大的学习率</li>
+<li><strong>改善梯度流</strong>：减少梯度消失和爆炸</li>
+<li><strong>正则化效果</strong>：减少对初始化的依赖</li>
+<li><strong>提高泛化</strong>：轻微的正则化效果</li>
+</ul>
+<p><strong>算法步骤</strong>：</p>
+<ol>
+<li>计算批次均值和方差</li>
+<li>归一化：x’ &#x3D; (x - μ)&#x2F;σ</li>
+<li>缩放和偏移：y &#x3D; γx’ + β</li>
+</ol>
+<h3 id="5-3-卷积神经网络（CNN）"><a href="#5-3-卷积神经网络（CNN）" class="headerlink" title="5.3 卷积神经网络（CNN）"></a>5.3 卷积神经网络（CNN）</h3><h4 id="5-3-1-卷积层"><a href="#5-3-1-卷积层" class="headerlink" title="5.3.1 卷积层"></a>5.3.1 卷积层</h4><p><strong>卷积核（过滤器）</strong>：</p>
+<ul>
+<li><strong>定义</strong>：用于特征提取的小型权重矩阵</li>
+<li><strong>作用</strong>：检测图像的局部特征</li>
+<li><strong>参数共享</strong>：同一卷积核在整个图像上共享</li>
+</ul>
+<h4 id="5-3-2-池化层"><a href="#5-3-2-池化层" class="headerlink" title="5.3.2 池化层"></a>5.3.2 池化层</h4><p><strong>主要作用</strong>：</p>
+<ul>
+<li><strong>减少空间尺寸</strong>：降低特征图大小</li>
+<li><strong>增加平移不变性</strong>：提高鲁棒性</li>
+<li><strong>减少参数数量</strong>：降低计算复杂度</li>
+</ul>
+<p><strong>池化类型</strong>：</p>
+<ul>
+<li><strong>最大池化</strong>：选择最大值</li>
+<li><strong>平均池化</strong>：计算平均值</li>
+<li><strong>全局池化</strong>：对整个特征图操作</li>
+</ul>
+<hr>
+<h2 id="6-数据预处理与特征工程"><a href="#6-数据预处理与特征工程" class="headerlink" title="6. 数据预处理与特征工程"></a>6. 数据预处理与特征工程</h2><h3 id="6-1-特征缩放"><a href="#6-1-特征缩放" class="headerlink" title="6.1 特征缩放"></a>6.1 特征缩放</h3><h4 id="6-1-1-归一化（Normalization）"><a href="#6-1-1-归一化（Normalization）" class="headerlink" title="6.1.1 归一化（Normalization）"></a>6.1.1 归一化（Normalization）</h4><p><strong>定义</strong>：将特征缩放到[0,1]区间的过程</p>
+<p><strong>公式</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x&#x27; = (x - min(x)) / (max(x) - min(x))</span><br></pre></td></tr></table></figure>
+
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>特征值范围差异较大</li>
+<li>需要统一尺度的情况</li>
+</ul>
+<h4 id="6-1-2-标准化（Standardization）"><a href="#6-1-2-标准化（Standardization）" class="headerlink" title="6.1.2 标准化（Standardization）"></a>6.1.2 标准化（Standardization）</h4><p><strong>定义</strong>：将特征转换为均值为0，标准差为1的分布</p>
+<p><strong>公式</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x&#x27; = (x - μ) / σ</span><br></pre></td></tr></table></figure>
+
+<p><strong>适用场景</strong>：</p>
+<ul>
+<li>特征分布近似正态分布</li>
+<li>需要正态化数据的情况</li>
+</ul>
+<h3 id="6-2-缺失值处理"><a href="#6-2-缺失值处理" class="headerlink" title="6.2 缺失值处理"></a>6.2 缺失值处理</h3><p><strong>常用方法</strong>：</p>
+<ol>
+<li><strong>均值填充</strong>：用特征的均值填补缺失值</li>
+<li><strong>中位数填充</strong>：用特征的中位数填补缺失值</li>
+<li><strong>删除法</strong>：直接删除含缺失值的样本</li>
+</ol>
+<p><strong>不包括的方法</strong>：</p>
+<ul>
+<li><strong>特征标准化</strong>：这是数据缩放方法，不是缺失值处理方法</li>
+</ul>
+<h3 id="6-3-特征工程"><a href="#6-3-特征工程" class="headerlink" title="6.3 特征工程"></a>6.3 特征工程</h3><p><strong>核心目标</strong>：通过提取或构造有效特征提升模型性能</p>
+<p><strong>主要方法</strong>：</p>
+<ul>
+<li><strong>特征提取</strong>：从原始数据中提取有用特征</li>
+<li><strong>特征构造</strong>：通过组合或变换创建新特征</li>
+<li><strong>特征选择</strong>：选择最相关的特征子集</li>
+</ul>
+<hr>
+<h2 id="7-模型评估与优化"><a href="#7-模型评估与优化" class="headerlink" title="7. 模型评估与优化"></a>7. 模型评估与优化</h2><h3 id="7-1-过拟合与欠拟合"><a href="#7-1-过拟合与欠拟合" class="headerlink" title="7.1 过拟合与欠拟合"></a>7.1 过拟合与欠拟合</h3><h4 id="7-1-1-过拟合"><a href="#7-1-1-过拟合" class="headerlink" title="7.1.1 过拟合"></a>7.1.1 过拟合</h4><p><strong>定义</strong>：模型在训练数据上误差极低，但在未见过的数据上误差显著升高</p>
+<p><strong>产生原因</strong>：</p>
+<ul>
+<li>模型复杂度过高</li>
+<li>训练数据不足</li>
+<li>特征数量过多</li>
+<li>训练时间过长</li>
+</ul>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>正则化</strong>：L1、L2正则化</li>
+<li><strong>Dropout</strong>：随机丢弃神经元</li>
+<li><strong>交叉验证</strong>：评估泛化能力</li>
+<li><strong>增加训练数据</strong>：提供更多样本</li>
+</ul>
+<h4 id="7-1-2-欠拟合"><a href="#7-1-2-欠拟合" class="headerlink" title="7.1.2 欠拟合"></a>7.1.2 欠拟合</h4><p><strong>定义</strong>：模型在训练数据和测试数据上都表现不好</p>
+<p><strong>产生原因</strong>：</p>
+<ul>
+<li>模型复杂度过低</li>
+<li>特征数量不足</li>
+<li>训练不充分</li>
+</ul>
+<p><strong>解决方案</strong>：</p>
+<ul>
+<li><strong>增加模型复杂度</strong>：使用更复杂的模型</li>
+<li><strong>增加特征</strong>：提供更多有用特征</li>
+<li><strong>减少正则化</strong>：适当减弱正则化强度</li>
+</ul>
+<h3 id="7-2-正则化技术"><a href="#7-2-正则化技术" class="headerlink" title="7.2 正则化技术"></a>7.2 正则化技术</h3><h4 id="7-2-1-L1正则化"><a href="#7-2-1-L1正则化" class="headerlink" title="7.2.1 L1正则化"></a>7.2.1 L1正则化</h4><p><strong>特点</strong>：产生稀疏权重向量</p>
+<p><strong>效果</strong>：</p>
+<ul>
+<li>自动进行特征选择</li>
+<li>产生稀疏解（很多权重为0）</li>
+<li>适用于特征选择场景</li>
+</ul>
+<h4 id="7-2-2-L2正则化"><a href="#7-2-2-L2正则化" class="headerlink" title="7.2.2 L2正则化"></a>7.2.2 L2正则化</h4><p><strong>特点</strong>：所有参数都趋向较小值</p>
+<p><strong>效果</strong>：</p>
+<ul>
+<li>所有参数都被抑制</li>
+<li>防止参数过大</li>
+<li>提高模型稳定性</li>
+</ul>
+<h3 id="7-3-模型评估指标"><a href="#7-3-模型评估指标" class="headerlink" title="7.3 模型评估指标"></a>7.3 模型评估指标</h3><h4 id="7-3-1-混淆矩阵"><a href="#7-3-1-混淆矩阵" class="headerlink" title="7.3.1 混淆矩阵"></a>7.3.1 混淆矩阵</h4><p><strong>结构</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">实际\预测    正类    负类</span><br><span class="line">正类        TP      FN</span><br><span class="line">负类        FP      TN</span><br></pre></td></tr></table></figure>
+
+<p><strong>含义</strong>：</p>
+<ul>
+<li><strong>TP（真正例）</strong>：实际为正，预测为正</li>
+<li><strong>TN（真负例）</strong>：实际为负，预测为负</li>
+<li><strong>FP（假正例）</strong>：实际为负，预测为正</li>
+<li><strong>FN（假负例）</strong>：实际为正，预测为负</li>
+</ul>
+<h4 id="7-3-2-精确率（Precision）"><a href="#7-3-2-精确率（Precision）" class="headerlink" title="7.3.2 精确率（Precision）"></a>7.3.2 精确率（Precision）</h4><p><strong>计算公式</strong>：TP&#x2F;(TP+FP)</p>
+<p><strong>含义</strong>：预测为正的样本中实际为正的比例</p>
+<h4 id="7-3-3-召回率（Recall）"><a href="#7-3-3-召回率（Recall）" class="headerlink" title="7.3.3 召回率（Recall）"></a>7.3.3 召回率（Recall）</h4><p><strong>计算公式</strong>：TP&#x2F;(TP+FN)</p>
+<p><strong>含义</strong>：实际为正的样本中被正确预测的比例</p>
+<h4 id="7-3-4-准确率（Accuracy）"><a href="#7-3-4-准确率（Accuracy）" class="headerlink" title="7.3.4 准确率（Accuracy）"></a>7.3.4 准确率（Accuracy）</h4><p><strong>计算公式</strong>：(TP+TN)&#x2F;(TP+TN+FP+FN)</p>
+<p><strong>含义</strong>：正确预测的样本数除以总样本数</p>
+<hr>
+<h2 id="8-关联规则挖掘"><a href="#8-关联规则挖掘" class="headerlink" title="8. 关联规则挖掘"></a>8. 关联规则挖掘</h2><h3 id="8-1-关联规则基本概念"><a href="#8-1-关联规则基本概念" class="headerlink" title="8.1 关联规则基本概念"></a>8.1 关联规则基本概念</h3><h4 id="8-1-1-关联规则定义"><a href="#8-1-1-关联规则定义" class="headerlink" title="8.1.1 关联规则定义"></a>8.1.1 关联规则定义</h4><p><strong>关联规则挖掘就是在交易数据库中挖掘强关联规则。</strong></p>
+<p><strong>基本概念</strong>：</p>
+<ul>
+<li><strong>事务</strong>：数据库中的一次交易或记录</li>
+<li><strong>项集</strong>：事务中项目的集合</li>
+<li><strong>频繁项集</strong>：支持度大于等于最小支持度的项集</li>
+<li><strong>关联规则</strong>：X → Y的蕴含式</li>
+</ul>
+<h4 id="8-1-2-频繁项集计算"><a href="#8-1-2-频繁项集计算" class="headerlink" title="8.1.2 频繁项集计算"></a>8.1.2 频繁项集计算</h4><p><strong>基本步骤</strong>：</p>
+<ol>
+<li><strong>扫描数据库</strong>：计算每个1-项集的支持度</li>
+<li><strong>剪枝</strong>：删除支持度小于最小支持度的项集</li>
+<li><strong>连接</strong>：生成候选k-项集</li>
+<li><strong>计数</strong>：计算候选k-项集的支持度</li>
+<li><strong>重复</strong>：直到不能生成新的频繁项集</li>
+</ol>
+<h4 id="8-1-3-支持度和置信度"><a href="#8-1-3-支持度和置信度" class="headerlink" title="8.1.3 支持度和置信度"></a>8.1.3 支持度和置信度</h4><p><strong>支持度（Support）</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Support(X) = Count(X) / Total_Transactions</span><br></pre></td></tr></table></figure>
+
+<p><strong>置信度（Confidence）</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Confidence(X → Y) = Support(X ∪ Y) / Support(X)</span><br></pre></td></tr></table></figure>
+
+<p><strong>提升度（Lift）</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Lift(X → Y) = Confidence(X → Y) / Support(Y)</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2-FP树算法"><a href="#8-2-FP树算法" class="headerlink" title="8.2 FP树算法"></a>8.2 FP树算法</h3><h4 id="8-2-1-FP树构建过程"><a href="#8-2-1-FP树构建过程" class="headerlink" title="8.2.1 FP树构建过程"></a>8.2.1 FP树构建过程</h4><p><strong>1. 第一次扫描</strong></p>
+<ul>
+<li>计算每个项的支持度</li>
+<li>按支持度降序排序项</li>
+</ul>
+<p><strong>2. 第二次扫描</strong></p>
+<ul>
+<li>为每个事务创建FP树路径</li>
+<li>更新项的计数和指针</li>
+</ul>
+<p><strong>3. FP树结构</strong></p>
+<ul>
+<li><strong>根节点</strong>：null</li>
+<li><strong>项前缀子树</strong>：按支持度排序的项</li>
+<li><strong>项头表</strong>：指向相同项的链表</li>
+</ul>
+<h4 id="8-2-2-FP增长算法"><a href="#8-2-2-FP增长算法" class="headerlink" title="8.2.2 FP增长算法"></a>8.2.2 FP增长算法</h4><p><strong>基本思想</strong>：通过FP树直接挖掘频繁项集</p>
+<p><strong>步骤</strong>：</p>
+<ol>
+<li><strong>构造条件FP树</strong></li>
+<li><strong>递归挖掘</strong></li>
+<li><strong>生成关联规则</strong></li>
+</ol>
+<hr>
+<h2 id="9-重点算法详解"><a href="#9-重点算法详解" class="headerlink" title="9. 重点算法详解"></a>9. 重点算法详解</h2><h3 id="9-1-SVM算法完整过程"><a href="#9-1-SVM算法完整过程" class="headerlink" title="9.1 SVM算法完整过程"></a>9.1 SVM算法完整过程</h3><p><strong>1. 数据预处理</strong></p>
+<ul>
+<li>特征标准化</li>
+<li>处理缺失值</li>
+<li>特征选择</li>
+</ul>
+<p><strong>2. 选择核函数</strong></p>
+<ul>
+<li>线性核：适合线性可分数据</li>
+<li>RBF核：适合非线性数据</li>
+<li>多项式核：适合特定非线性模式</li>
+</ul>
+<p><strong>3. 参数优化</strong></p>
+<ul>
+<li>C参数：控制间隔和误差的权衡</li>
+<li>γ参数（RBF核）：控制单个样本的影响范围</li>
+</ul>
+<p><strong>4. 训练模型</strong></p>
+<ul>
+<li>求解对偶问题</li>
+<li>计算支持向量</li>
+<li>确定决策边界</li>
+</ul>
+<p><strong>5. 预测新样本</strong></p>
+<ul>
+<li>计算核函数值</li>
+<li>应用决策函数</li>
+<li>返回分类结果</li>
+</ul>
+<h3 id="9-2-k-NN算法详细过程"><a href="#9-2-k-NN算法详细过程" class="headerlink" title="9.2 k-NN算法详细过程"></a>9.2 k-NN算法详细过程</h3><p><strong>1. 距离计算</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dist(x₁,x₂) = √Σᵢ(x₁ᵢ - x₂ᵢ)²</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 邻居选择</strong></p>
+<ul>
+<li>计算与所有训练样本的距离</li>
+<li>按距离排序</li>
+<li>选择前k个最近邻居</li>
+</ul>
+<p><strong>3. 投票决策</strong></p>
+<ul>
+<li>统计k个邻居的类别</li>
+<li>返回得票最多的类别</li>
+<li>处理平票情况（选择距离最近的）</li>
+</ul>
+<h3 id="9-3-ID3决策树算法详解"><a href="#9-3-ID3决策树算法详解" class="headerlink" title="9.3 ID3决策树算法详解"></a>9.3 ID3决策树算法详解</h3><p><strong>1. 信息熵计算</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">H(S) = -Σᵢ pᵢlog₂(pᵢ)</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 信息增益计算</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Gain(S,A) = H(S) - Σᵥ (|Sᵥ|/|S|)H(Sᵥ)</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 属性选择</strong></p>
+<ul>
+<li>计算所有候选属性的信息增益</li>
+<li>选择信息增益最大的属性</li>
+<li>创建分裂节点</li>
+</ul>
+<p><strong>4. 递归构建</strong></p>
+<ul>
+<li>为每个分裂值创建子节点</li>
+<li>递归处理子节点</li>
+<li>处理特殊情况（纯节点、空节点）</li>
+</ul>
+<h3 id="9-4-朴素贝叶斯分类过程"><a href="#9-4-朴素贝叶斯分类过程" class="headerlink" title="9.4 朴素贝叶斯分类过程"></a>9.4 朴素贝叶斯分类过程</h3><p><strong>1. 训练阶段</strong></p>
+<ul>
+<li>计算先验概率：P(C)</li>
+<li>计算条件概率：P(Xᵢ|C)</li>
+<li>处理零概率问题（拉普拉斯平滑）</li>
+</ul>
+<p><strong>2. 分类阶段</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">P(C|x) ∝ P(C)∏P(xᵢ|C)</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 预测</strong></p>
+<ul>
+<li>计算每个类别的后验概率</li>
+<li>选择概率最大的类别</li>
+<li>返回预测结果</li>
+</ul>
+<hr>
+<h2 id="10-考试重点题型分析"><a href="#10-考试重点题型分析" class="headerlink" title="10. 考试重点题型分析"></a>10. 考试重点题型分析</h2><h3 id="10-1-概念选择题"><a href="#10-1-概念选择题" class="headerlink" title="10.1 概念选择题"></a>10.1 概念选择题</h3><p><strong>高频考点</strong>：</p>
+<ol>
+<li><strong>监督vs无监督学习</strong>：数据是否有标注</li>
+<li><strong>分类vs回归</strong>：输出是离散还是连续</li>
+<li><strong>过拟合现象</strong>：训练误差低，测试误差高</li>
+<li><strong>正则化类型</strong>：L1稀疏，L2抑制参数</li>
+<li><strong>激活函数公式</strong>：ReLU、sigmoid、tanh</li>
+</ol>
+<p><strong>答题技巧</strong>：</p>
+<ul>
+<li>仔细区分相似概念</li>
+<li>记住关键公式和定义</li>
+<li>注意题目中的关键词</li>
+</ul>
+<h3 id="10-2-算法过程题"><a href="#10-2-算法过程题" class="headerlink" title="10.2 算法过程题"></a>10.2 算法过程题</h3><p><strong>常见题型</strong>：</p>
+<ol>
+<li><strong>算法步骤排序</strong></li>
+<li><strong>算法复杂度分析</strong></li>
+<li><strong>参数选择影响</strong></li>
+</ol>
+<p><strong>解题要点</strong>：</p>
+<ul>
+<li>理解算法的基本思想</li>
+<li>记住关键步骤的顺序</li>
+<li>掌握参数的作用</li>
+</ul>
+<h3 id="10-3-计算题"><a href="#10-3-计算题" class="headerlink" title="10.3 计算题"></a>10.3 计算题</h3><p><strong>计算类型</strong>：</p>
+<ol>
+<li><strong>信息增益计算</strong></li>
+<li><strong>距离度量</strong></li>
+<li><strong>概率计算</strong></li>
+<li><strong>性能指标</strong></li>
+</ol>
+<p><strong>计算公式</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">信息熵：H(S) = -Σpᵢlog₂(pᵢ)</span><br><span class="line">信息增益：Gain(S,A) = H(S) - Σ|Sᵥ|/|S|H(Sᵥ)</span><br><span class="line">欧几里得距离：d = √Σ(xᵢ-yᵢ)²</span><br><span class="line">精确率：P = TP/(TP+FP)</span><br><span class="line">召回率：R = TP/(TP+FN)</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-4-应用题"><a href="#10-4-应用题" class="headerlink" title="10.4 应用题"></a>10.4 应用题</h3><p><strong>常见场景</strong>：</p>
+<ol>
+<li><strong>算法选择</strong>：根据问题特点选择合适算法</li>
+<li><strong>参数调优</strong>：根据性能要求调整参数</li>
+<li><strong>数据预处理</strong>：根据数据特点选择预处理方法</li>
+</ol>
+<p><strong>解题策略</strong>：</p>
+<ul>
+<li>分析问题特征</li>
+<li>选择合适方法</li>
+<li>给出具体方案</li>
+</ul>
+<hr>
+<h2 id="复习重点与建议"><a href="#复习重点与建议" class="headerlink" title="复习重点与建议"></a>复习重点与建议</h2><h3 id="核心考点排序"><a href="#核心考点排序" class="headerlink" title="核心考点排序"></a>核心考点排序</h3><ol>
+<li><strong>基础概念</strong>：监督&#x2F;无监督、分类&#x2F;回归</li>
+<li><strong>核心算法</strong>：SVM、k-NN、决策树、朴素贝叶斯</li>
+<li><strong>模型评估</strong>：过拟合、正则化、评估指标</li>
+<li><strong>高级方法</strong>：集成学习、深度学习</li>
+<li><strong>实际应用</strong>：数据预处理、特征工程</li>
+</ol>
+<h3 id="复习策略"><a href="#复习策略" class="headerlink" title="复习策略"></a>复习策略</h3><ol>
+<li><strong>理解原理</strong>：深入理解算法的工作原理</li>
+<li><strong>掌握公式</strong>：记住关键公式和计算方法</li>
+<li><strong>多做练习</strong>：通过练习巩固理论知识</li>
+<li><strong>总结归纳</strong>：整理相似概念的联系和区别</li>
+</ol>
+<h3 id="考试技巧"><a href="#考试技巧" class="headerlink" title="考试技巧"></a>考试技巧</h3><ol>
+<li><strong>仔细读题</strong>：注意题目中的限定条件</li>
+<li><strong>排除法</strong>：先排除明显错误的选项</li>
+<li><strong>画图辅助</strong>：复杂问题可以画图帮助理解</li>
+<li><strong>时间分配</strong>：合理安排答题时间</li>
+</ol>
+<hr>
+<h2 id="本复习资料基于算法考试常见题型整理，涵盖了机器学习的主要算法和应用。建议结合教材和课堂笔记进行系统性复习，重点掌握算法的原理和计算方法。"><a href="#本复习资料基于算法考试常见题型整理，涵盖了机器学习的主要算法和应用。建议结合教材和课堂笔记进行系统性复习，重点掌握算法的原理和计算方法。" class="headerlink" title="本复习资料基于算法考试常见题型整理，涵盖了机器学习的主要算法和应用。建议结合教材和课堂笔记进行系统性复习，重点掌握算法的原理和计算方法。"></a><em>本复习资料基于算法考试常见题型整理，涵盖了机器学习的主要算法和应用。建议结合教材和课堂笔记进行系统性复习，重点掌握算法的原理和计算方法。</em></h2><h2 id="11-算法填空题标准答案"><a href="#11-算法填空题标准答案" class="headerlink" title="11. 算法填空题标准答案"></a>11. 算法填空题标准答案</h2><h3 id="11-1-机器学习基础填空"><a href="#11-1-机器学习基础填空" class="headerlink" title="11.1 机器学习基础填空"></a>11.1 机器学习基础填空</h3><p><strong>1. 机器学习按任务类型可分为</strong> 监督学习 <strong>、</strong> 无监督学习 <strong>和</strong> 强化学习 <strong>。</strong></p>
+<p><strong>2. 若学习任务的目标是预测连续值，该任务称为</strong> 回归 <strong>。</strong></p>
+<p><strong>3. 若学习任务的目标是预测离散值，该任务称为</strong> 分类 <strong>。</strong></p>
+<p><strong>4. 在机器学习中，将数据集分为训练集、验证集和</strong> 测试 <strong>集，其中</strong> 测试 <strong>集用于最终评估模型的泛化能力。</strong></p>
+<h3 id="11-2-算法相关填空"><a href="#11-2-算法相关填空" class="headerlink" title="11.2 算法相关填空"></a>11.2 算法相关填空</h3><p><strong>5. 线性回归中，最小化</strong> 均方误差 <strong>函数来估计参数。</strong></p>
+<p><strong>6. 支持向量机中，使用</strong> 核 <strong>函数可以将数据映射到高维空间。</strong></p>
+<p><strong>7. 支持向量机（SVM）中，核函数的作用是将低维空间中的</strong> 非线性可分 <strong>数据映射到高维空间。</strong></p>
+<p><strong>8. 决策树算法C4.5使用</strong> 信息增益比 <strong>比率作为分裂标准。</strong></p>
+<p><strong>9. ID3算法以信息论的</strong> 熵 <strong>为基础，以</strong> 信息增益 <strong>为”属性测试条件”。</strong></p>
+<p><strong>10. 在神经网络中，使用</strong> 反向传播 <strong>算法来优化权重参数。</strong></p>
+<h3 id="11-3-评估指标填空"><a href="#11-3-评估指标填空" class="headerlink" title="11.3 评估指标填空"></a>11.3 评估指标填空</h3><p><strong>11. 准确率是正确预测的样本数除以</strong> 总样本数 <strong>。</strong></p>
+<p><strong>12. 逻辑回归使用</strong> sigmoid <strong>函数将输出映射到(0,1)区间。</strong></p>
+<h3 id="11-4-正则化与采样"><a href="#11-4-正则化与采样" class="headerlink" title="11.4 正则化与采样"></a>11.4 正则化与采样</h3><p><strong>13. L2正则化在损失函数中添加参数的</strong> 平方和 <strong>。</strong></p>
+<p><strong>14. 随机森林通过</strong> 自举 <strong>采样生成不同的训练子集。</strong></p>
+<h3 id="11-5-深度学习相关"><a href="#11-5-深度学习相关" class="headerlink" title="11.5 深度学习相关"></a>11.5 深度学习相关</h3><p><strong>15. 卷积神经网络中的卷积核也称为</strong> 过滤器 <strong>。</strong></p>
+<p><strong>16. 自然语言处理中，</strong> 词嵌入 <strong>表示将文本转换为数值向量的过程。</strong></p>
+<p><strong>17. 主成分分析中，第一主成分是数据</strong> 方差 <strong>最大的方向。</strong></p>
+<h3 id="11-6-其他重要概念"><a href="#11-6-其他重要概念" class="headerlink" title="11.6 其他重要概念"></a>11.6 其他重要概念</h3><p><strong>18. 贝叶斯分类器基于</strong> 贝叶斯 <strong>定理。</strong></p>
+<p><strong>19. 集成学习通过结合多个</strong> 基础 <strong>模型来提高预测性能。</strong></p>
+<p><strong>20. k-means聚类算法中，需要指定参数</strong> k <strong>（聚类数量）。</strong></p>
+<h3 id="11-7-数据预处理"><a href="#11-7-数据预处理" class="headerlink" title="11.7 数据预处理"></a>11.7 数据预处理</h3><p><strong>21. 数据预处理中，将特征缩放到 [0,1] 区间的过程称为</strong> 归一化 <strong>（Normalization）。</strong></p>
+<p><strong>22. 数据预处理中，标准化（Standardization）是将特征转换为均值为0、标准差为1的分布。</strong></p>
+<h3 id="11-8-关联规则挖掘"><a href="#11-8-关联规则挖掘" class="headerlink" title="11.8 关联规则挖掘"></a>11.8 关联规则挖掘</h3><p><strong>23. 关联规则挖掘就是在</strong> 交易数据库 <strong>中挖掘强关联规则。</strong></p>
+<h3 id="11-9-信息论基础"><a href="#11-9-信息论基础" class="headerlink" title="11.9 信息论基础"></a>11.9 信息论基础</h3><p><strong>24. 组数据越有序，熵值越低；一组数据越无序，熵值越</strong> 高 <strong>。</strong></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://pingju666.github.io">yunpeng Long</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://pingju666.github.io/2025/12/15/%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8E%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/">https://pingju666.github.io/2025/12/15/%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8E%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://pingju666.github.io" target="_blank">凭据的博客 | 技术分享与生活记录</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93-%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法, 机器学习, 考点总结, 复习资料, 数据结构</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.png" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/12/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93%E4%B8%8E%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" title="操作系统考点总结与复习资料"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">操作系统考点总结与复习资料</div></div><div class="info-2"><div class="info-item-1">操作系统考点总结与复习资料目录 计算机系统基础 进程管理 存储管理 文件系统 设备管理 中断与系统调用 进程调度 同步与互斥 死锁 磁盘调度 虚拟存储 考试重点题型详解   1. 计算机系统基础1.1 计算机启动过程计算机启动过程：  CPU加电，CS:IP指向FFFF0H - CPU开始执行 执行BIOS中的JMP跳转指令 - 跳转到BIOS启动代码 硬件自检 - POST(上电自检)检测硬件 登记BIOS中断程序入口地址 - 建立中断向量表 操作系统引导 - 加载操作系统  正确的执行顺序：1 → 2 → 3 → 4 → 5 关键知识点：  BIOS位于ROM中，地址FFFF0H BIOS执行JMP指令跳转到启动代码 POST检测内存、显卡、键盘等设备 建立中断向量表后，操作系统才能正常响应中断 最后加载操作系统引导程序到内存  1.2 操作系统的特征 并发性：多个程序同时运行 共享性：系统资源被多个进程共享 虚拟性：将物理资源虚拟为逻辑资源 异步性：进程执行的不确定性  1.3 操作系统的基本功能 进程管理：进程的创建、撤销、调度、同步、通信 存储管理：内存分配、回收、保护...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">yunpeng Long</div><div class="author-info-description">热爱编程的技术爱好者，专注于C/C++、算法和Web开发。分享技术心得，记录生活点滴。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pingju666"><i class="fab fa-github"></i><span>GitHub主页</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/pingju666" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:2196683912@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #ffa500;"></i></a><a class="social-icon" href="https://weibo.com/" target="_blank" title="微博"><i class="fab fa-weibo" style="color: #e6162d;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的技术博客！这里分享编程技术、算法题解、项目经验和生活记录。期待与您交流学习！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8E%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">算法复习资料与考点总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.1.</span> <span class="toc-text">目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-number">1.2.</span> <span class="toc-text">1. 机器学习基础概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.1 机器学习分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1-%E6%8C%89%E4%BB%BB%E5%8A%A1%E7%B1%BB%E5%9E%8B%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">1.1.1 按任务类型分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2-%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">1.1.2 监督学习与无监督学习的主要区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E5%88%86%E7%B1%BB%E4%B8%8E%E5%9B%9E%E5%BD%92%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.2.</span> <span class="toc-text">1.2 分类与回归的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1-%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">1.2.1 分类问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2-%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">1.2.2 回归问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-3-%E5%8C%BA%E5%88%AB%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.2.3.</span> <span class="toc-text">1.2.3 区别总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">2. 监督学习算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%EF%BC%88SVM%EF%BC%89"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.1 支持向量机（SVM）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-SVM%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">2.1.1 SVM基本原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-SVM%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">2.1.2 SVM公式推导</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-k%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%EF%BC%88k-NN%EF%BC%89"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.2 k近邻算法（k-NN）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E7%AE%97%E6%B3%95%E8%BF%87%E7%A8%8B"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">2.2.1 算法过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-k%E5%80%BC%E9%80%89%E6%8B%A9%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">2.2.2 k值选择的影响</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-3-%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">2.2.3 距离度量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%86%B3%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3 决策树算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1-ID3%E7%AE%97%E6%B3%95%E8%BF%87%E7%A8%8B"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">2.3.1 ID3算法过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-2-%E5%86%B3%E7%AD%96%E6%A0%91%E5%89%AA%E6%9E%9D"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">2.3.2 决策树剪枝</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95"><span class="toc-number">1.3.4.</span> <span class="toc-text">2.4 贝叶斯分类算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-1-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">2.4.1 贝叶斯定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-2-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E8%BF%87%E7%A8%8B"><span class="toc-number">1.3.4.2.</span> <span class="toc-text">2.4.2 朴素贝叶斯分类过程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">3. 无监督学习算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-K-means%E8%81%9A%E7%B1%BB"><span class="toc-number">1.4.1.</span> <span class="toc-text">3.1 K-means聚类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-%E7%AE%97%E6%B3%95%E8%BF%87%E7%A8%8B"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">3.1.1 算法过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.1.2.</span> <span class="toc-text">3.1.2 目标函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%EF%BC%88PCA%EF%BC%89"><span class="toc-number">1.4.2.</span> <span class="toc-text">3.2 主成分分析（PCA）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-PCA%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="toc-number">1.4.2.1.</span> <span class="toc-text">3.2.1 PCA核心思想</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-PCA%E7%AE%97%E6%B3%95%E8%BF%87%E7%A8%8B"><span class="toc-number">1.4.2.2.</span> <span class="toc-text">3.2.2 PCA算法过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-3-PCA%E7%89%B9%E7%82%B9"><span class="toc-number">1.4.2.3.</span> <span class="toc-text">3.2.3 PCA特点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95"><span class="toc-number">1.5.</span> <span class="toc-text">4. 集成学习方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.5.1.</span> <span class="toc-text">4.1 集成学习基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Bagging"><span class="toc-number">1.5.2.</span> <span class="toc-text">4.2 Bagging</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Boosting"><span class="toc-number">1.5.3.</span> <span class="toc-text">4.3 Boosting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Stacking"><span class="toc-number">1.5.4.</span> <span class="toc-text">4.4 Stacking</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80"><span class="toc-number">1.6.</span> <span class="toc-text">5. 深度学习基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="toc-number">1.6.1.</span> <span class="toc-text">5.1 神经网络基本结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-1-%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="toc-number">1.6.1.1.</span> <span class="toc-text">5.1.1 激活函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-1-2-%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95"><span class="toc-number">1.6.1.2.</span> <span class="toc-text">5.1.2 反向传播算法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8A%80%E6%9C%AF"><span class="toc-number">1.6.2.</span> <span class="toc-text">5.2 深度学习技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-1-Dropout"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">5.2.1 Dropout</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-2-2-%E6%89%B9%E9%87%8F%E5%BD%92%E4%B8%80%E5%8C%96%EF%BC%88Batch-Normalization%EF%BC%89"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">5.2.2 批量归一化（Batch Normalization）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%88CNN%EF%BC%89"><span class="toc-number">1.6.3.</span> <span class="toc-text">5.3 卷积神经网络（CNN）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3-1-%E5%8D%B7%E7%A7%AF%E5%B1%82"><span class="toc-number">1.6.3.1.</span> <span class="toc-text">5.3.1 卷积层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-3-2-%E6%B1%A0%E5%8C%96%E5%B1%82"><span class="toc-number">1.6.3.2.</span> <span class="toc-text">5.3.2 池化层</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86%E4%B8%8E%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.7.</span> <span class="toc-text">6. 数据预处理与特征工程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E7%89%B9%E5%BE%81%E7%BC%A9%E6%94%BE"><span class="toc-number">1.7.1.</span> <span class="toc-text">6.1 特征缩放</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-%E5%BD%92%E4%B8%80%E5%8C%96%EF%BC%88Normalization%EF%BC%89"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">6.1.1 归一化（Normalization）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-%E6%A0%87%E5%87%86%E5%8C%96%EF%BC%88Standardization%EF%BC%89"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">6.1.2 标准化（Standardization）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E7%BC%BA%E5%A4%B1%E5%80%BC%E5%A4%84%E7%90%86"><span class="toc-number">1.7.2.</span> <span class="toc-text">6.2 缺失值处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.7.3.</span> <span class="toc-text">6.3 特征工程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E4%BC%98%E5%8C%96"><span class="toc-number">1.8.</span> <span class="toc-text">7. 模型评估与优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E8%BF%87%E6%8B%9F%E5%90%88%E4%B8%8E%E6%AC%A0%E6%8B%9F%E5%90%88"><span class="toc-number">1.8.1.</span> <span class="toc-text">7.1 过拟合与欠拟合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-1-%E8%BF%87%E6%8B%9F%E5%90%88"><span class="toc-number">1.8.1.1.</span> <span class="toc-text">7.1.1 过拟合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-2-%E6%AC%A0%E6%8B%9F%E5%90%88"><span class="toc-number">1.8.1.2.</span> <span class="toc-text">7.1.2 欠拟合</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E6%AD%A3%E5%88%99%E5%8C%96%E6%8A%80%E6%9C%AF"><span class="toc-number">1.8.2.</span> <span class="toc-text">7.2 正则化技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-1-L1%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.8.2.1.</span> <span class="toc-text">7.2.1 L1正则化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-2-L2%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-number">1.8.2.2.</span> <span class="toc-text">7.2.2 L2正则化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="toc-number">1.8.3.</span> <span class="toc-text">7.3 模型评估指标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-3-1-%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5"><span class="toc-number">1.8.3.1.</span> <span class="toc-text">7.3.1 混淆矩阵</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-3-2-%E7%B2%BE%E7%A1%AE%E7%8E%87%EF%BC%88Precision%EF%BC%89"><span class="toc-number">1.8.3.2.</span> <span class="toc-text">7.3.2 精确率（Precision）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-3-3-%E5%8F%AC%E5%9B%9E%E7%8E%87%EF%BC%88Recall%EF%BC%89"><span class="toc-number">1.8.3.3.</span> <span class="toc-text">7.3.3 召回率（Recall）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-3-4-%E5%87%86%E7%A1%AE%E7%8E%87%EF%BC%88Accuracy%EF%BC%89"><span class="toc-number">1.8.3.4.</span> <span class="toc-text">7.3.4 准确率（Accuracy）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E6%8C%96%E6%8E%98"><span class="toc-number">1.9.</span> <span class="toc-text">8. 关联规则挖掘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.9.1.</span> <span class="toc-text">8.1 关联规则基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-1-%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E5%AE%9A%E4%B9%89"><span class="toc-number">1.9.1.1.</span> <span class="toc-text">8.1.1 关联规则定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-2-%E9%A2%91%E7%B9%81%E9%A1%B9%E9%9B%86%E8%AE%A1%E7%AE%97"><span class="toc-number">1.9.1.2.</span> <span class="toc-text">8.1.2 频繁项集计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-1-3-%E6%94%AF%E6%8C%81%E5%BA%A6%E5%92%8C%E7%BD%AE%E4%BF%A1%E5%BA%A6"><span class="toc-number">1.9.1.3.</span> <span class="toc-text">8.1.3 支持度和置信度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-FP%E6%A0%91%E7%AE%97%E6%B3%95"><span class="toc-number">1.9.2.</span> <span class="toc-text">8.2 FP树算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-2-1-FP%E6%A0%91%E6%9E%84%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">1.9.2.1.</span> <span class="toc-text">8.2.1 FP树构建过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-2-2-FP%E5%A2%9E%E9%95%BF%E7%AE%97%E6%B3%95"><span class="toc-number">1.9.2.2.</span> <span class="toc-text">8.2.2 FP增长算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E9%87%8D%E7%82%B9%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.10.</span> <span class="toc-text">9. 重点算法详解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-SVM%E7%AE%97%E6%B3%95%E5%AE%8C%E6%95%B4%E8%BF%87%E7%A8%8B"><span class="toc-number">1.10.1.</span> <span class="toc-text">9.1 SVM算法完整过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-k-NN%E7%AE%97%E6%B3%95%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B"><span class="toc-number">1.10.2.</span> <span class="toc-text">9.2 k-NN算法详细过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-ID3%E5%86%B3%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.10.3.</span> <span class="toc-text">9.3 ID3决策树算法详解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E8%BF%87%E7%A8%8B"><span class="toc-number">1.10.4.</span> <span class="toc-text">9.4 朴素贝叶斯分类过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E8%80%83%E8%AF%95%E9%87%8D%E7%82%B9%E9%A2%98%E5%9E%8B%E5%88%86%E6%9E%90"><span class="toc-number">1.11.</span> <span class="toc-text">10. 考试重点题型分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-%E6%A6%82%E5%BF%B5%E9%80%89%E6%8B%A9%E9%A2%98"><span class="toc-number">1.11.1.</span> <span class="toc-text">10.1 概念选择题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%E7%AE%97%E6%B3%95%E8%BF%87%E7%A8%8B%E9%A2%98"><span class="toc-number">1.11.2.</span> <span class="toc-text">10.2 算法过程题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-%E8%AE%A1%E7%AE%97%E9%A2%98"><span class="toc-number">1.11.3.</span> <span class="toc-text">10.3 计算题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-4-%E5%BA%94%E7%94%A8%E9%A2%98"><span class="toc-number">1.11.4.</span> <span class="toc-text">10.4 应用题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E4%B9%A0%E9%87%8D%E7%82%B9%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.12.</span> <span class="toc-text">复习重点与建议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E8%80%83%E7%82%B9%E6%8E%92%E5%BA%8F"><span class="toc-number">1.12.1.</span> <span class="toc-text">核心考点排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E4%B9%A0%E7%AD%96%E7%95%A5"><span class="toc-number">1.12.2.</span> <span class="toc-text">复习策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%80%83%E8%AF%95%E6%8A%80%E5%B7%A7"><span class="toc-number">1.12.3.</span> <span class="toc-text">考试技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99%E5%9F%BA%E4%BA%8E%E7%AE%97%E6%B3%95%E8%80%83%E8%AF%95%E5%B8%B8%E8%A7%81%E9%A2%98%E5%9E%8B%E6%95%B4%E7%90%86%EF%BC%8C%E6%B6%B5%E7%9B%96%E4%BA%86%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%BB%E8%A6%81%E7%AE%97%E6%B3%95%E5%92%8C%E5%BA%94%E7%94%A8%E3%80%82%E5%BB%BA%E8%AE%AE%E7%BB%93%E5%90%88%E6%95%99%E6%9D%90%E5%92%8C%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0%E8%BF%9B%E8%A1%8C%E7%B3%BB%E7%BB%9F%E6%80%A7%E5%A4%8D%E4%B9%A0%EF%BC%8C%E9%87%8D%E7%82%B9%E6%8E%8C%E6%8F%A1%E7%AE%97%E6%B3%95%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E3%80%82"><span class="toc-number">1.13.</span> <span class="toc-text">本复习资料基于算法考试常见题型整理，涵盖了机器学习的主要算法和应用。建议结合教材和课堂笔记进行系统性复习，重点掌握算法的原理和计算方法。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E7%AE%97%E6%B3%95%E5%A1%AB%E7%A9%BA%E9%A2%98%E6%A0%87%E5%87%86%E7%AD%94%E6%A1%88"><span class="toc-number">1.14.</span> <span class="toc-text">11. 算法填空题标准答案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E5%A1%AB%E7%A9%BA"><span class="toc-number">1.14.1.</span> <span class="toc-text">11.1 机器学习基础填空</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-%E7%AE%97%E6%B3%95%E7%9B%B8%E5%85%B3%E5%A1%AB%E7%A9%BA"><span class="toc-number">1.14.2.</span> <span class="toc-text">11.2 算法相关填空</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87%E5%A1%AB%E7%A9%BA"><span class="toc-number">1.14.3.</span> <span class="toc-text">11.3 评估指标填空</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4-%E6%AD%A3%E5%88%99%E5%8C%96%E4%B8%8E%E9%87%87%E6%A0%B7"><span class="toc-number">1.14.4.</span> <span class="toc-text">11.4 正则化与采样</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3"><span class="toc-number">1.14.5.</span> <span class="toc-text">11.5 深度学习相关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-6-%E5%85%B6%E4%BB%96%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5"><span class="toc-number">1.14.6.</span> <span class="toc-text">11.6 其他重要概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-7-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-number">1.14.7.</span> <span class="toc-text">11.7 数据预处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-8-%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%E6%8C%96%E6%8E%98"><span class="toc-number">1.14.8.</span> <span class="toc-text">11.8 关联规则挖掘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-9-%E4%BF%A1%E6%81%AF%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="toc-number">1.14.9.</span> <span class="toc-text">11.9 信息论基础</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/15/%E7%AE%97%E6%B3%95%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8E%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93/" title="算法复习资料与考点总结">算法复习资料与考点总结</a><time datetime="2025-12-15T03:00:00.000Z" title="发表于 2025-12-15 11:00:00">2025-12-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/15/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%80%83%E7%82%B9%E6%80%BB%E7%BB%93%E4%B8%8E%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" title="操作系统考点总结与复习资料">操作系统考点总结与复习资料</a><time datetime="2025-12-15T02:00:00.000Z" title="发表于 2025-12-15 10:00:00">2025-12-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/14/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E6%93%8D%E6%95%99%E7%A8%8B/" title="Hadoop伪分布式与完全分布式实操教程">Hadoop伪分布式与完全分布式实操教程</a><time datetime="2025-12-14T09:51:21.000Z" title="发表于 2025-12-14 17:51:21">2025-12-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/20/windows%E4%B8%AD%E6%96%87%E5%90%8D%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%94%B9%E8%8B%B1%E6%96%87%E5%90%8D/" title="Windows计算机中文名改英文名详细教程">Windows计算机中文名改英文名详细教程</a><time datetime="2025-11-20T15:00:57.000Z" title="发表于 2025-11-20 23:00:57">2025-11-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/11/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BC%9A-c%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/" title="无人机协会 C语言教程">无人机协会 C语言教程</a><time datetime="2025-11-11T15:55:34.000Z" title="发表于 2025-11-11 23:55:34">2025-11-11</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By yunpeng Long</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><!-- Custom navigation script--><script src="/js/custom_nav.js"></script><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.1"></script></div></div></body></html>
