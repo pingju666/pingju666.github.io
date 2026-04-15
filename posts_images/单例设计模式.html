@@ -1,15 +1,17 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>标签: STL | 凭据的博客 | 技术分享与生活记录</title><meta name="author" content="yunpeng Long,2196683912@qq.com"><meta name="copyright" content="yunpeng Long"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="欢迎来到凭据的博客！这里分享编程技术、算法题解、项目经验以及生活中的美好瞬间。专注于C&#x2F;C++、算法、Web开发等技术领域，同时记录个人成长与生活感悟。">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>单例设计模式 | 凭据的博客 | 技术分享与生活记录</title><meta name="author" content="yunpeng Long,2196683912@qq.com"><meta name="copyright" content="yunpeng Long"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="单例设计模式学习笔记📚 单例模式概述单例模式（Singleton Pattern）是一种创建型设计模式，确保一个类在整个程序生命周期中只有一个实例，并提供全局访问点。 核心要素   要素 说明    私有构造函数 防止外部直接创建实例   禁止拷贝 防止通过拷贝产生新实例   静态访问方法 提供全局唯一的访问入口   静态实例存储 保存唯一的实例对象    🔀 两种实现方式对比饿汉式 vs 懒">
 <meta property="og:type" content="website">
-<meta property="og:title" content="凭据的博客 | 技术分享与生活记录">
-<meta property="og:url" content="https://pingju666.github.io/tags/STL/index.html">
+<meta property="og:title" content="单例设计模式">
+<meta property="og:url" content="https://pingju666.github.io/posts_images/%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html">
 <meta property="og:site_name" content="凭据的博客 | 技术分享与生活记录">
-<meta property="og:description" content="欢迎来到凭据的博客！这里分享编程技术、算法题解、项目经验以及生活中的美好瞬间。专注于C&#x2F;C++、算法、Web开发等技术领域，同时记录个人成长与生活感悟。">
+<meta property="og:description" content="单例设计模式学习笔记📚 单例模式概述单例模式（Singleton Pattern）是一种创建型设计模式，确保一个类在整个程序生命周期中只有一个实例，并提供全局访问点。 核心要素   要素 说明    私有构造函数 防止外部直接创建实例   禁止拷贝 防止通过拷贝产生新实例   静态访问方法 提供全局唯一的访问入口   静态实例存储 保存唯一的实例对象    🔀 两种实现方式对比饿汉式 vs 懒">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pingju666.github.io/img/avatar.png">
+<meta property="article:published_time" content="2024-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-15T05:15:03.623Z">
 <meta property="article:author" content="yunpeng Long">
 <meta property="article:tag" content="C&#x2F;C++, 算法, 编程, 技术博客, 个人博客, 项目开发, 生活记录">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pingju666.github.io/img/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://pingju666.github.io/tags/STL/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/null"/><link rel="apple-touch-icon" sizes="180x180" href="/img/avatar.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+<meta name="twitter:image" content="https://pingju666.github.io/img/avatar.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://pingju666.github.io/posts_images/%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/null"/><link rel="apple-touch-icon" sizes="180x180" href="/img/avatar.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
     (() => {
       
     const saveToLocal = {
@@ -138,11 +140,103 @@
   },
   autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '标签: STL',
+  title: '单例设计模式',
   isHighlightShrink: false,
   isToc: false,
-  pageType: 'tag'
-}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/photos/"><i class="fa-fw fas fa-camera"></i><span> Photos</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">凭据的博客 | 技术分享与生活记录</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/photos/"><i class="fa-fw fas fa-camera"></i><span> Photos</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">STL</h1></div></header><main class="layout" id="content-inner"><div id="tag"><div class="article-sort-title">标签 - STL</div><div class="article-sort"><div class="article-sort-item year">2025</div><div class="article-sort-item no-article-cover"><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2025-11-05T07:38:50.000Z" title="发表于 2025-11-05 15:38:50">2025-11-05</time></div><a class="article-sort-item-title" href="/2025/11/05/unordered-map%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="unordered_map介绍和基本操作">unordered_map介绍和基本操作</a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">yunpeng Long</div><div class="author-info-description">热爱编程的技术爱好者，专注于C/C++、算法和Web开发。分享技术心得，记录生活点滴。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pingju666"><i class="fab fa-github"></i><span>GitHub主页</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/pingju666" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:2196683912@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #ffa500;"></i></a><a class="social-icon" href="https://weibo.com/" target="_blank" title="微博"><i class="fab fa-weibo" style="color: #e6162d;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的技术博客！这里分享编程技术、算法题解、项目经验和生活记录。期待与您交流学习！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/05/Linux-Socket%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E6%A0%B8%E5%BF%83%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/" title="Linux Socket网络编程核心函数详解">Linux Socket网络编程核心函数详解</a><time datetime="2026-03-05T13:59:06.000Z" title="发表于 2026-03-05 21:59:06">2026-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/14/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E6%93%8D%E6%95%99%E7%A8%8B/" title="Hadoop伪分布式与完全分布式实操教程">Hadoop伪分布式与完全分布式实操教程</a><time datetime="2025-12-14T09:51:21.000Z" title="发表于 2025-12-14 17:51:21">2025-12-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/20/windows%E4%B8%AD%E6%96%87%E5%90%8D%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%94%B9%E8%8B%B1%E6%96%87%E5%90%8D/" title="Windows计算机中文名改英文名详细教程">Windows计算机中文名改英文名详细教程</a><time datetime="2025-11-20T15:00:57.000Z" title="发表于 2025-11-20 23:00:57">2025-11-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/11/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BC%9A-c%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/" title="无人机协会 C语言教程">无人机协会 C语言教程</a><time datetime="2025-11-11T15:55:34.000Z" title="发表于 2025-11-11 23:55:34">2025-11-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/10/QT-QML-%E7%BB%83%E4%B9%A0%E6%A1%88%E4%BE%8B/" title="Qt QML 练习案例与进阶指南">Qt QML 练习案例与进阶指南</a><time datetime="2025-11-10T14:45:46.000Z" title="发表于 2025-11-10 22:45:46">2025-11-10</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+  pageType: 'page'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/photos/"><i class="fa-fw fas fa-camera"></i><span> Photos</span></a></div></div></div></div><div class="page type-draft" id="body-wrap"><header class="not-home-page fixed" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">凭据的博客 | 技术分享与生活记录</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/photos/"><i class="fa-fw fas fa-camera"></i><span> Photos</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">单例设计模式</h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><h1 id="单例设计模式学习笔记"><a href="#单例设计模式学习笔记" class="headerlink" title="单例设计模式学习笔记"></a>单例设计模式学习笔记</h1><h2 id="📚-单例模式概述"><a href="#📚-单例模式概述" class="headerlink" title="📚 单例模式概述"></a>📚 单例模式概述</h2><p>单例模式（Singleton Pattern）是一种创建型设计模式，确保一个类在整个程序生命周期中<strong>只有一个实例</strong>，并提供全局访问点。</p>
+<h3 id="核心要素"><a href="#核心要素" class="headerlink" title="核心要素"></a>核心要素</h3><table>
+<thead>
+<tr>
+<th>要素</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>私有构造函数</td>
+<td>防止外部直接创建实例</td>
+</tr>
+<tr>
+<td>禁止拷贝</td>
+<td>防止通过拷贝产生新实例</td>
+</tr>
+<tr>
+<td>静态访问方法</td>
+<td>提供全局唯一的访问入口</td>
+</tr>
+<tr>
+<td>静态实例存储</td>
+<td>保存唯一的实例对象</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🔀-两种实现方式对比"><a href="#🔀-两种实现方式对比" class="headerlink" title="🔀 两种实现方式对比"></a>🔀 两种实现方式对比</h2><h3 id="饿汉式-vs-懒汉式"><a href="#饿汉式-vs-懒汉式" class="headerlink" title="饿汉式 vs 懒汉式"></a>饿汉式 vs 懒汉式</h3><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>饿汉式</th>
+<th>懒汉式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>创建时机</td>
+<td>程序启动时</td>
+<td>第一次调用时</td>
+</tr>
+<tr>
+<td>线程安全</td>
+<td>天然安全</td>
+<td>C++11 局部静态变量安全</td>
+</tr>
+<tr>
+<td>资源占用</td>
+<td>可能浪费</td>
+<td>按需创建</td>
+</tr>
+<tr>
+<td>实现复杂度</td>
+<td>简单</td>
+<td>简单（C++11）</td>
+</tr>
+<tr>
+<td>.cpp 初始化</td>
+<td>需要</td>
+<td>不需要</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="💻-代码实现"><a href="#💻-代码实现" class="headerlink" title="💻 代码实现"></a>💻 代码实现</h2><h3 id="1-饿汉式单例（NetConfig）"><a href="#1-饿汉式单例（NetConfig）" class="headerlink" title="1. 饿汉式单例（NetConfig）"></a>1. 饿汉式单例（NetConfig）</h3><p><strong>文件：</strong> <a href="file://D:\cpp_project\net_cpp_demo1\net_cpp_client\server_socket.h">server_socket.h</a></p>
+<pre><code class="language-cpp">#pragma once
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;sys/socket.h&gt;
+#include &lt;arpa/inet.h&gt;
+#include &lt;string.h&gt;
+
+// 饿汉式单例
+class NetConfig
+{
+public:
+    // 获取唯一实例
+    static NetConfig&amp; getInstance() {
+        return instance;
+    }
+
+    // 禁止拷贝
+    NetConfig(const NetConfig&amp;) = delete;
+    NetConfig&amp; operator = (const NetConfig&amp;) = delete;
+
+private:
+    // 私有构造函数
+    NetConfig() {}
+    
+    // 静态成员声明
+    static NetConfig instance;
+};
+</code></pre>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">yunpeng Long</div><div class="author-info-description">热爱编程的技术爱好者，专注于C/C++、算法和Web开发。分享技术心得，记录生活点滴。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pingju666"><i class="fab fa-github"></i><span>GitHub主页</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/pingju666" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:2196683912@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss" style="color: #ffa500;"></i></a><a class="social-icon" href="https://weibo.com/" target="_blank" title="微博"><i class="fab fa-weibo" style="color: #e6162d;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的技术博客！这里分享编程技术、算法题解、项目经验和生活记录。期待与您交流学习！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/03/05/Linux-Socket%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E6%A0%B8%E5%BF%83%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/" title="Linux Socket网络编程核心函数详解">Linux Socket网络编程核心函数详解</a><time datetime="2026-03-05T13:59:06.000Z" title="发表于 2026-03-05 21:59:06">2026-03-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/14/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E6%93%8D%E6%95%99%E7%A8%8B/" title="Hadoop伪分布式与完全分布式实操教程">Hadoop伪分布式与完全分布式实操教程</a><time datetime="2025-12-14T09:51:21.000Z" title="发表于 2025-12-14 17:51:21">2025-12-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/20/windows%E4%B8%AD%E6%96%87%E5%90%8D%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%94%B9%E8%8B%B1%E6%96%87%E5%90%8D/" title="Windows计算机中文名改英文名详细教程">Windows计算机中文名改英文名详细教程</a><time datetime="2025-11-20T15:00:57.000Z" title="发表于 2025-11-20 23:00:57">2025-11-20</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/11/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BC%9A-c%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/" title="无人机协会 C语言教程">无人机协会 C语言教程</a><time datetime="2025-11-11T15:55:34.000Z" title="发表于 2025-11-11 23:55:34">2025-11-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/10/QT-QML-%E7%BB%83%E4%B9%A0%E6%A1%88%E4%BE%8B/" title="Qt QML 练习案例与进阶指南">Qt QML 练习案例与进阶指南</a><time datetime="2025-11-10T14:45:46.000Z" title="发表于 2025-11-10 22:45:46">2025-11-10</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             
