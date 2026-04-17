@@ -266,6 +266,21 @@ code {
   box-shadow: var(--shadow-sm);
 }
 
+/* 代码块滚动修复 */
+.highlight-container pre,
+.highlight-container code {
+  max-height: none !important;
+  height: auto !important;
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+  white-space: pre !important;
+}
+
+#article-container .highlight {
+  max-height: none !important;
+  overflow: visible !important;
+}
+
 /* 链接效果 */
 a:not(.menu-item a):not(.page-number):not(.card-tag-item):not(#go-up) {
   position: relative;
