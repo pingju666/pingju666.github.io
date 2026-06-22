@@ -544,6 +544,68 @@ table thead {
   .recent-post-item {
     margin-bottom: 15px;
   }
+}
+
+/* ====== 第二十部分：标签页纯CSS修复 ====== */
+/* 当URL为 /tags/ 时，将侧边栏标签云移到主内容区 */
+body:not(.page-type-tag) #content-inner {
+  display: flex;
+}
+
+/* 标签页专用布局：隐藏空的主内容区，让标签云占据主区域 */
+#page[data-path="/tags/"] #content-inner,
+#page[data-path="/tags/index.html"] #content-inner {
+  display: block !important;
+}
+
+#page[data-path="/tags/"] #page,
+#page[data-path="/tags/index.html"] #page {
+  display: none !important;
+}
+
+#page[data-path="/tags/"] #aside-content,
+#page[data-path="/tags/index.html"] #aside-content {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+}
+
+#page[data-path="/tags/"] #aside-content .card-widget:not(.card-tags),
+#page[data-path="/tags/index.html"] #aside-content .card-widget:not(.card-tags) {
+  display: none !important;
+}
+
+#page[data-path="/tags/"] #aside-content .card-tags,
+#page[data-path="/tags/index.html"] #aside-content .card-tags {
+  border-radius: var(--radius-md) !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+  padding: 40px 20px !important;
+}
+
+#page[data-path="/tags/"] #aside-content .card-tags .item-headline,
+#page[data-path="/tags/index.html"] #aside-content .card-tags .item-headline {
+  font-size: 1.5em !important;
+  color: var(--text-primary) !important;
+  margin-bottom: 24px !important;
+}
+
+#page[data-path="/tags/"] #aside-content .card-tag-cloud a,
+#page[data-path="/tags/index.html"] #aside-content .card-tag-cloud a {
+  color: #5B8C85 !important;
+  font-size: inherit !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+  margin: 6px 12px !important;
+}
+
+#page[data-path="/tags/"] #aside-content .card-tag-cloud a:hover,
+#page[data-path="/tags/index.html"] #aside-content .card-tag-cloud a:hover {
+  color: #C98A8A !important;
+  transform: scale(1.12) !important;
+}
 
   .card-widget {
     margin-bottom: 15px;
