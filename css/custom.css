@@ -1,20 +1,55 @@
 /* ============================================
-   PingJu Blog Custom Styles
-   网站美化增强样式
+   PingJu Blog - 黛青雅韵配色方案 v2.0
+   中国传统色彩体系 · 五正色间色应用
+   覆盖 Butterfly 主题核心变量
    ============================================ */
 
+/* ====== 第一部分：覆盖主题核心 CSS 变量 ====== */
 :root {
-  --primary-color: #49B1F5;
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  /* 主色系 - 黛青雅韵 */
+  --primary-color: #5B8C85;           /* 青碧 - 主色调 */
+  --primary-gradient: linear-gradient(135deg, #5B8C85 0%, #3D6B66 100%);
+  --primary-light: #7AA9A3;          /* 浅青碧 */
+  --primary-dark: #3D6B66;           /* 松花绿 */
+
+  /* 辅助色系 */
+  --accent-color: #C98A8A;           /* 胭脂淡 - 点缀/强调 */
+  --accent-warm: #E2C288;            /* 鎏金浅 - 分隔线/装饰 */
+  --accent-copper: #B87333;          /* 古铜 */
+
+  /* 中性色系 */
+  --text-primary: #2D3844;           /* 墨棕 - 主文字 */
+  --text-secondary: #594A40;         /* 棕线 - 次要文字 */
+  --text-muted: #8B7E74;            /* 驼灰 - 辅助文字 */
+  --bg-light: #F7F3EB;              /* 古绢米 - 浅背景 */
+  --bg-dark: #2D3844;               /* 墨棕 - 深背景 */
+
+  /* 【关键】覆盖 Butterfly 主题变量 */
+  --light-grey: #594A40;            /* 原 #EEEEEE → 棕线（导航/页脚文字） */
+  --font-color: #2D3844;            /* 原 #4C4948 → 墨棕（全局文字） */
+  --btn-hover-color: #C98A8A;       /* 从配置读取（胭脂淡） */
+  --btn-color: #fff;
+  --text-highlight-color: #2D3844;  /* 原 #1F2D3D → 墨棕（标题） */
+  --text-bg-hover: rgba(91, 140, 133, .15);  /* 导航子菜单hover */
+  --default-bg-color: #5B8C85;      /* 原 $theme-color → 青碧 */
+  --pseudo-hover: #C98A8A;           /* 原 $button-hover-color */
+  --card-bg: #fff;
+  --sidebar-bg: #F7F3EB;            /* 原 #f6f8fa → 古绢米 */
+  --global-bg: #FAF8F3;             /* 页面背景微暖 */
+  --card-meta: #594A40;             /* 元信息色 */
+  --scrollbar-color: #5B8C85;
+
+  /* 阴影与圆角 */
+  --shadow-sm: 0 2px 8px rgba(45, 56, 68, 0.08);
+  --shadow-md: 0 4px 16px rgba(45, 56, 68, 0.12);
+  --shadow-lg: 0 8px 32px rgba(45, 56, 68, 0.18);
+  --shadow-accent: 0 4px 15px rgba(91, 140, 133, 0.35);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
 }
 
-/* 全局优化 */
+/* ====== 第二部分：全局基础样式 ====== */
 * {
   scroll-behavior: smooth;
 }
@@ -24,12 +59,33 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
 }
 
-/* 头部导航美化 */
+/* 全局链接 - 黛青色 */
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-dark) !important;
+}
+
+/* 标题颜色 */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary) !important;
+}
+
+/* 文本选择高亮 - 青碧底白字 */
+::selection {
+  background: #5B8C85 !important;
+  color: #fff !important;
+}
+
+/* ====== 第三部分：导航栏（重点修复）====== */
 #nav {
   backdrop-filter: blur(20px) saturate(180%);
-  background: rgba(255, 255, 255, 0.85) !important;
+  background: rgba(247, 243, 235, 0.92) !important;
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
 }
@@ -38,14 +94,48 @@ body {
   box-shadow: var(--shadow-md);
 }
 
+/* 博客标题 */
 #site-title {
   font-weight: 700 !important;
   letter-spacing: -0.5px;
+  color: var(--white) !important;
 }
 
+/* 副标题 - 首页顶图上需要浅色，其他页面用深色 */
 #site-subtitle {
   font-size: 0.85em !important;
-  opacity: 0.85;
+  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* 非首页（无顶图）时副标题用深色 */
+#page-header:not(.full_page) #site-subtitle,
+#page-header.nav-fixed #site-subtitle,
+#page-header.not-top-img #site-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+/* 【关键修复】导航链接颜色 - 覆盖主题的 var(--light-grey) */
+#nav a,
+#nav span.site-page {
+  color: var(--text-secondary) !important;
+  text-shadow: none !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#nav a:hover,
+#nav span.site-page:hover {
+  color: var(--primary-color) !important;
+}
+
+/* 导航博客信息 */
+#blog-info {
+  color: var(--text-secondary) !important;
+}
+
+#blog-info:hover {
+  color: var(--primary-color) !important;
 }
 
 /* 导航菜单项 */
@@ -53,11 +143,6 @@ body {
   position: relative;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: var(--radius-sm);
-}
-
-.menu-item a:hover {
-  color: var(--primary-color) !important;
-  transform: translateY(-2px);
 }
 
 .menu-item a::after {
@@ -77,13 +162,37 @@ body {
   width: 80%;
 }
 
-/* 首页文章卡片 */
+/* 导航固定状态 */
+#page-header.nav-fixed #nav a,
+#page-header.nav-fixed #nav span.site-page,
+#page-header.nav-fixed #toggle-menu {
+  color: var(--text-secondary) !important;
+}
+
+#page-header.nav-fixed #nav a:hover,
+#page-header.nav-fixed #nav span.site-page:hover {
+  color: var(--primary-color) !important;
+}
+
+/* 无顶图导航 */
+#page-header.not-top-img #nav a,
+#page-header.not-top-img #nav span.site-page {
+  color: var(--font-color) !important;
+}
+
+#page-header.not-top-img #nav a:hover,
+#page-header.not-top-img #nav span.site-page:hover {
+  color: var(--primary-color) !important;
+}
+
+/* ====== 第四部分：首页文章卡片 ====== */
 .recent-post-item {
   border-radius: var(--radius-md) !important;
   overflow: hidden;
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: none !important;
   box-shadow: var(--shadow-sm);
+  background: #fff;
 }
 
 .recent-post-item:hover {
@@ -98,6 +207,7 @@ body {
 .article-title {
   font-weight: 600 !important;
   line-height: 1.5 !important;
+  color: var(--text-primary) !important;
   transition: color 0.3s ease;
 }
 
@@ -117,62 +227,81 @@ body {
   box-shadow: var(--shadow-md);
 }
 
-/* 文章页面 */
+/* ====== 第五部分：文章页面 ====== */
 .post-bg img,
 #page-header.bg-img {
-  filter: brightness(0.7);
+  filter: brightness(0.75) saturate(0.95);
   transition: filter 0.5s ease;
 }
 
 .post-bg:hover img,
 #page-header.bg-img:hover {
-  filter: brightness(0.9);
+  filter: brightness(0.92) saturate(1.05);
 }
 
-/* 标签和分类 */
+/* 文章标题 */
+.post-title {
+  color: var(--white) !important;
+  border-bottom-color: var(--accent-warm) !important;
+}
+
+/* 文章元信息 */
+#post-meta,
+#post-meta a {
+  color: #d4cfc5 !important;
+}
+
+#post-meta a:hover {
+  color: var(--accent-warm) !important;
+}
+
+/* ====== 第六部分：标签和分类 ====== */
 .card-category .card-tag-list .card-tag-item {
   border-radius: 20px !important;
   padding: 4px 14px !important;
   font-size: 12px !important;
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  color: var(--text-secondary);
 }
 
 .card-category .card-tag-list .card-tag-item:hover {
   background: var(--primary-color) !important;
   color: white !important;
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(73, 177, 245, 0.35);
+  box-shadow: var(--shadow-accent);
 }
 
-/* 侧边栏卡片 */
+/* ====== 第七部分：侧边栏 ====== */
 .card-widget {
   border-radius: var(--radius-md) !important;
   box-shadow: var(--shadow-sm);
   border: none !important;
   transition: all 0.3s ease;
+  background: #fff;
 }
 
 .card-widget:hover {
   box-shadow: var(--shadow-md);
 }
 
-/* 搜索框 */
+/* ====== 第八部分：搜索框 ====== */
 #search-input {
   border-radius: 25px !important;
-  border: 2px solid #e8e8e8 !important;
+  border: 2px solid #e2e2e2 !important;
   transition: all 0.3s ease;
 }
 
 #search-input:focus {
   border-color: var(--primary-color) !important;
-  box-shadow: 0 0 0 4px rgba(73, 177, 245, 0.15);
+  box-shadow: 0 0 0 4px rgba(91, 140, 133, 0.15);
 }
 
-/* 按钮美化 */
+/* ====== 第九部分：按钮与分页 ====== */
 button,
 .button,
-a.button {
+a.button,
+.btn-beautify {
   border-radius: var(--radius-sm) !important;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   font-weight: 500 !important;
@@ -180,21 +309,28 @@ a.button {
 
 button:hover,
 .button:hover,
-a.button:hover {
+a.button:hover,
+.btn-beautify:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
-/* 分页 */
+/* 分页器 */
 .pagination {
   margin-top: 40px;
 }
 
-.page-number.current,
-.page-number:hover {
-  background: var(--primary-gradient) !important;
+.page-number.current {
+  background: #3D6B66 !important;
   color: white !important;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: var(--shadow-accent);
+  transform: scale(1.05);
+}
+
+.page-number:hover {
+  background: var(--primary-color) !important;
+  color: white !important;
+  box-shadow: var(--shadow-accent);
   transform: scale(1.05);
 }
 
@@ -206,13 +342,21 @@ a.button:hover {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  color: var(--text-secondary);
 }
 
-/* 页脚 */
+/* 分页 hover 背景色 */
+.layout .pagination > *:not(.space):hover {
+  background: rgba(91, 140, 133, .15) !important;
+  color: var(--primary-color) !important;
+}
+
+/* ====== 第十部分：页脚（黛青底色）====== */
 #footer {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+  background: linear-gradient(135deg, #2D3844 0%, #3D6B66 100%) !important;
   position: relative;
   overflow: hidden;
+  color: #d4cfc5 !important;
 }
 
 #footer::before {
@@ -225,13 +369,27 @@ a.button:hover {
   background: var(--primary-gradient);
 }
 
+#footer * {
+  position: relative;
+  color: #d4cfc5 !important;
+}
+
+#footer a {
+  color: #7AA9A3 !important;
+  transition: color 0.3s ease;
+}
+
+#footer a:hover {
+  color: #E2C288 !important;
+}
+
 .footer-banner-group,
 .footer_custom_text,
 .copyright {
   z-index: 1;
 }
 
-/* 回到顶部 */
+/* ====== 第十一部分：回到顶部 ====== */
 #go-up {
   border-radius: 50% !important;
   width: 44px !important;
@@ -240,26 +398,16 @@ a.button:hover {
   align-items: center;
   justify-content: center;
   background: var(--primary-gradient) !important;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: var(--shadow-accent);
   transition: all 0.3s ease;
 }
 
 #go-up:hover {
   transform: translateY(-4px) scale(1.1);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+  box-shadow: 0 8px 25px rgba(91, 140, 133, 0.5);
 }
 
-/* 图片优化 */
-img {
-  image-rendering: -webkit-optimize-contrast;
-}
-
-img:hover {
-  opacity: 0.95;
-  transition: opacity 0.3s ease;
-}
-
-/* 代码块 */
+/* ====== 第十二部分：代码块 ====== */
 .highlight-container,
 code {
   border-radius: var(--radius-sm) !important;
@@ -281,17 +429,39 @@ code {
   overflow: visible !important;
 }
 
-/* 链接效果 */
-a:not(.menu-item a):not(.page-number):not(.card-tag-item):not(#go-up) {
-  position: relative;
-  transition: color 0.3s ease;
+/* ====== 第十三部分：图片优化 ====== */
+img {
+  image-rendering: -webkit-optimize-contrast;
 }
 
-a:not(.menu-item a):not(.page-number):not(.card-tag-item):not(#go-up):hover {
-  color: var(--primary-color) !important;
+img:hover {
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
 }
 
-/* 加载动画 */
+/* ====== 第十四部分：引用块 ====== */
+blockquote {
+  border-left-color: #5B8C85 !important;
+  background-color: rgba(91, 140, 133, .06) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ====== 第十五部分：表格 ====== */
+table {
+  border-top-color: var(--text-muted) !important;
+  border-left-color: var(--text-muted) !important;
+}
+
+table th,
+table td {
+  border-color: var(--text-muted) !important;
+}
+
+table thead {
+  background: rgba(91, 140, 133, .08) !important;
+}
+
+/* ====== 第十六部分：加载动画 ====== */
 .loading-box {
   display: flex;
   align-items: center;
@@ -313,7 +483,39 @@ a:not(.menu-item a):not(.page-number):not(.card-tag-item):not(#go-up):hover {
   to { transform: rotate(360deg); }
 }
 
-/* 响应式优化 */
+/* ====== 第十七部分：滚动条美化 ====== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ede6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5B8C85 0%, #3D6B66 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #3D6B66 0%, #5B8C85 100%);
+}
+
+/* Firefox 滚动条 */
+* {
+  scrollbar-color: #5B8C85 #f1ede6;
+  scrollbar-width: thin;
+}
+
+/* ====== 第十八部分：焦点轮廓 ====== */
+*:focus-visible {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px;
+}
+
+/* ====== 第十九部分：响应式优化 ====== */
 @media (max-width: 768px) {
   :root {
     --radius-md: 10px;
@@ -333,7 +535,6 @@ a:not(.menu-item a):not(.page-number):not(.card-tag-item):not(#go-up):hover {
     backdrop-filter: blur(10px);
   }
 
-  /* 移动端导航 */
   .menu-item a::after {
     display: none;
   }
@@ -347,36 +548,4 @@ a:not(.menu-item a):not(.page-number):not(.card-tag-item):not(#go-up):hover {
   .card-widget {
     margin-bottom: 15px;
   }
-}
-
-/* 滚动条美化 */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #5a67d8 0%, #667eea 100%);
-}
-
-/* 选择文本颜色 */
-::selection {
-  background: var(--primary-color);
-  color: white;
-}
-
-/* 焦点轮廓 */
-*:focus-visible {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
 }
