@@ -290,6 +290,14 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-md);
 }
 
+/* 首页侧栏与文章列表收齐，完整导航卡片保留在内容页 */
+#content-inner > #recent-posts + #aside-content .card-categories,
+#content-inner > #recent-posts + #aside-content .card-tags,
+#content-inner > #recent-posts + #aside-content .card-archives,
+#content-inner > #recent-posts + #aside-content .card-webinfo {
+  display: none !important;
+}
+
 /* ====== 第八部分：搜索框 ====== */
 #search-input {
   border-radius: 25px !important;
@@ -553,66 +561,156 @@ table thead {
 
 /* ====== 第二十部分：标签页纯CSS修复 ====== */
 /* 当URL为 /tags/ 时，将侧边栏标签云移到主内容区 */
-body:not(.page-type-tag) #content-inner {
-  display: flex;
-}
-
 /* 标签页专用布局：隐藏空的主内容区，让标签云占据主区域 */
-#page[data-path="/tags/"] #content-inner,
-#page[data-path="/tags/index.html"] #content-inner {
+.card-widget {
+  margin-bottom: 15px;
+}
+
+
+/* ====== 标签页与分类页 ====== */
+#body-wrap.type-tags #content-inner,
+#body-wrap.type-categories #content-inner {
   display: block !important;
+  width: min(1100px, calc(100% - 40px));
+  max-width: 1100px !important;
+  margin: 0 auto;
 }
 
-#page[data-path="/tags/"] #page,
-#page[data-path="/tags/index.html"] #page {
-  display: none !important;
+#body-wrap.type-tags #page,
+#body-wrap.type-categories #page {
+  width: 100%;
+  min-height: 0;
+  padding: 38px 42px 44px;
+  border: 1px solid rgba(91, 140, 133, 0.12);
+  border-radius: var(--radius-md);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
 }
 
-#page[data-path="/tags/"] #aside-content,
-#page[data-path="/tags/index.html"] #aside-content {
-  max-width: 100% !important;
-  width: 100% !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
+#body-wrap.type-tags .tag-cloud-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  text-align: left !important;
 }
 
-#page[data-path="/tags/"] #aside-content .card-widget:not(.card-tags),
-#page[data-path="/tags/index.html"] #aside-content .card-widget:not(.card-tags) {
-  display: none !important;
-}
-
-#page[data-path="/tags/"] #aside-content .card-tags,
-#page[data-path="/tags/index.html"] #aside-content .card-tags {
-  border-radius: var(--radius-md) !important;
+#body-wrap.type-tags .tag-cloud-list a {
+  display: inline-flex !important;
+  align-items: center;
+  min-height: 38px;
+  margin: 0 !important;
+  padding: 7px 14px !important;
+  border: 1px solid rgba(91, 140, 133, 0.18);
+  border-radius: 7px !important;
+  background: #f4f7f5 !important;
   box-shadow: none !important;
-  border: none !important;
-  background: transparent !important;
-  padding: 40px 20px !important;
+  color: var(--text-secondary) !important;
+  font-size: 14px !important;
+  line-height: 1.45;
+  transform: none !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease, transform 0.2s ease;
 }
 
-#page[data-path="/tags/"] #aside-content .card-tags .item-headline,
-#page[data-path="/tags/index.html"] #aside-content .card-tags .item-headline {
-  font-size: 1.5em !important;
+#body-wrap.type-tags .tag-cloud-list a:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-color) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+}
+
+#body-wrap.type-categories .category-lists {
+  width: 100%;
+}
+
+#body-wrap.type-categories .category-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+#body-wrap.type-categories .category-list > .category-list-item {
+  min-width: 0;
+  margin: 0 !important;
+  padding: 16px 18px !important;
+  border: 1px solid rgba(91, 140, 133, 0.14);
+  border-radius: 7px;
+  background: #f8faf8;
+  list-style: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+#body-wrap.type-categories .category-list > .category-list-item:hover {
+  border-color: rgba(91, 140, 133, 0.4);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+#body-wrap.type-categories .category-list > .category-list-item > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: var(--text-primary) !important;
-  margin-bottom: 24px !important;
+  font-size: 1.05em;
+  font-weight: 600;
 }
 
-#page[data-path="/tags/"] #aside-content .card-tag-cloud a,
-#page[data-path="/tags/index.html"] #aside-content .card-tag-cloud a {
-  color: #5B8C85 !important;
-  font-size: inherit !important;
-  transition: all 0.3s ease !important;
-  display: inline-block !important;
-  margin: 6px 12px !important;
+#body-wrap.type-categories .category-list-count {
+  margin-left: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(91, 140, 133, 0.12);
+  color: var(--primary-dark) !important;
+  font-size: 12px;
 }
 
-#page[data-path="/tags/"] #aside-content .card-tag-cloud a:hover,
-#page[data-path="/tags/index.html"] #aside-content .card-tag-cloud a:hover {
-  color: #C98A8A !important;
-  transform: scale(1.12) !important;
+#body-wrap.type-categories .category-list-count::before,
+#body-wrap.type-categories .category-list-count::after {
+  content: none !important;
 }
 
-  .card-widget {
-    margin-bottom: 15px;
+#body-wrap.type-categories .category-list-child {
+  margin: 12px 0 0 !important;
+  padding: 0 0 0 14px !important;
+  border-left: 2px solid rgba(91, 140, 133, 0.2);
+  list-style: none;
+}
+
+#body-wrap.type-categories .category-list-child li {
+  margin: 7px 0;
+  list-style: none;
+}
+
+#body-wrap.type-categories .category-list-child a {
+  color: var(--text-secondary) !important;
+}
+
+@media (max-width: 768px) {
+  #body-wrap.type-tags #content-inner,
+  #body-wrap.type-categories #content-inner {
+    width: calc(100% - 24px);
+  }
+
+  #body-wrap.type-tags #page,
+  #body-wrap.type-categories #page {
+    padding: 26px 18px 30px;
+  }
+
+  #body-wrap.type-tags .tag-cloud-list {
+    gap: 8px;
+  }
+
+  #body-wrap.type-tags .tag-cloud-list a {
+    padding: 7px 11px !important;
+    font-size: 13px !important;
+  }
+
+  #body-wrap.type-categories .category-list {
+    grid-template-columns: 1fr;
   }
 }
