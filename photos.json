@@ -1,3 +1,46 @@
 {
-  "photos": []
+  "photos": [
+    {
+      "id": 1,
+      "title": "QML Hello World 示例",
+      "description": "Qt QML 入门示例，三个色块展示 Rectangle 组件与基础样式。",
+      "category": "作品",
+      "date": "2025-11-10T00:00:00.000Z",
+      "location": "开发环境",
+      "tags": [
+        "Qt",
+        "QML",
+        "UI"
+      ],
+      "image": "post_dome5.png"
+    },
+    {
+      "id": 2,
+      "title": "QML 属性操作示例",
+      "description": "演示 QML 属性绑定与状态切换的练习案例运行效果。",
+      "category": "技术",
+      "date": "2025-11-10T00:00:00.000Z",
+      "location": "开发环境",
+      "tags": [
+        "Qt",
+        "QML",
+        "属性绑定"
+      ],
+      "image": "post_dome5_1.png"
+    },
+    {
+      "id": 3,
+      "title": "QML 属性绑定示例",
+      "description": "通过属性绑定实现界面元素联动的示例截图。",
+      "category": "技术",
+      "date": "2025-11-10T00:00:00.000Z",
+      "location": "开发环境",
+      "tags": [
+        "Qt",
+        "QML",
+        "示例"
+      ],
+      "image": "post_dome5_2.png"
+    }
+  ]
 }

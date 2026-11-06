@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://pingju666.github.io/photos/index.html</loc>
+    
+    <lastmod>2026-10-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/games/typing/index.html</loc>
+    
+    <lastmod>2026-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/games/memory/index.html</loc>
+    
+    <lastmod>2026-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/games/2048/index.html</loc>
+    
+    <lastmod>2026-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/games/snake/index.html</loc>
+    
+    <lastmod>2026-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/games/index.html</loc>
+    
+    <lastmod>2026-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/categories/index.html</loc>
+    
+    <lastmod>2026-07-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/index.html</loc>
+    
+    <lastmod>2026-07-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2026/06/22/QML%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/</loc>
+    
+    <lastmod>2026-06-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/posts_images/%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html</loc>
+    
+    <lastmod>2026-04-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2025/11/04/cpp%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</loc>
+    
+    <lastmod>2026-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2026/03/05/Linux-Socket%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E6%A0%B8%E5%BF%83%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/</loc>
+    
+    <lastmod>2026-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2025/12/14/Hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8E%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%9E%E6%93%8D%E6%95%99%E7%A8%8B/</loc>
+    
+    <lastmod>2025-12-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2025/11/20/windows%E4%B8%AD%E6%96%87%E5%90%8D%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%94%B9%E8%8B%B1%E6%96%87%E5%90%8D/</loc>
+    
+    <lastmod>2025-11-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2025/11/11/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BC%9A-c%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B/</loc>
+    
+    <lastmod>2025-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2025/11/10/QT-QML-%E7%BB%83%E4%B9%A0%E6%A1%88%E4%BE%8B/</loc>
+    
+    <lastmod>2025-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2025/11/07/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</loc>
+    
+    <lastmod>2025-11-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/archives/index.html</loc>
+    
+    <lastmod>2025-11-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2025/11/09/Qt-qml%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/</loc>
+    
+    <lastmod>2025-11-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2025/11/04/%E6%A8%A1%E6%8B%9F%E6%A0%88/</loc>
+    
+    <lastmod>2025-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/2025/11/05/unordered-map%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2025-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/images/README.html</loc>
+    
+    <lastmod>2025-11-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://pingju666.github.io/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/Socket/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/TCP/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/Linux/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/Qt/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/QML/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/UI%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/Hadoop-%E5%A4%A7%E6%95%B0%E6%8D%AE-%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/MVVM/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/Windows-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE-%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/C%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%8D%8F%E4%BC%9A/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/C/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/STL/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E6%A0%88/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/UDP/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://pingju666.github.io/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/categories/Qt%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/categories/%E7%BC%96%E7%A8%8B%E6%95%99%E7%A8%8B/C-C/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/categories/C-%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://pingju666.github.io/categories/C-%E6%95%99%E7%A8%8B/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+</urlset>
